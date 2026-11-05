@@ -1,0 +1,3727 @@
+{
+  "version": "1.8.9",
+  "client": "lunar",
+  "classes": [
+    {
+      "name": "Minecraft",
+      "obfuscatedName": "net/minecraft/client/Minecraft",
+      "fields": [
+        {
+          "name": "theMinecraft",
+          "obfuscatedName": "theMinecraft",
+          "signature": "Lnet/minecraft/client/Minecraft;",
+          "static": true,
+          "binding": "MINECRAFT_INSTANCE",
+          "required": true
+        },
+        {
+          "name": "thePlayer",
+          "obfuscatedName": "thePlayer",
+          "signature": "Lnet/minecraft/client/entity/EntityPlayerSP;",
+          "static": false,
+          "binding": "MINECRAFT_THE_PLAYER",
+          "required": true
+        },
+        {
+          "name": "theWorld",
+          "obfuscatedName": "theWorld",
+          "signature": "Lnet/minecraft/client/multiplayer/WorldClient;",
+          "static": false,
+          "binding": "MINECRAFT_THE_WORLD",
+          "required": true
+        },
+        {
+          "name": "timer",
+          "obfuscatedName": "timer",
+          "signature": "Lnet/minecraft/util/Timer;",
+          "static": false
+        },
+        {
+          "name": "currentScreen",
+          "obfuscatedName": "currentScreen",
+          "signature": "Lnet/minecraft/client/gui/GuiScreen;",
+          "static": false,
+          "binding": "MINECRAFT_CURRENT_SCREEN",
+          "required": true,
+          "aliases": [
+            "field_71462_r"
+          ]
+        },
+        {
+          "name": "gameSettings",
+          "obfuscatedName": "gameSettings",
+          "signature": "Lnet/minecraft/client/settings/GameSettings;",
+          "static": false,
+          "binding": "MINECRAFT_GAME_SETTINGS",
+          "required": true,
+          "aliases": [
+            "field_71474_y"
+          ]
+        },
+        {
+          "name": "mouseHelper",
+          "obfuscatedName": "mouseHelper",
+          "signature": "Lnet/minecraft/util/MouseHelper;",
+          "static": false
+        },
+        {
+          "name": "renderManager",
+          "obfuscatedName": "renderManager",
+          "signature": "Lnet/minecraft/client/renderer/entity/RenderManager;",
+          "static": false
+        },
+        {
+          "name": "fontRendererObj",
+          "obfuscatedName": "fontRendererObj",
+          "signature": "Lnet/minecraft/client/gui/FontRenderer;",
+          "static": false
+        },
+        {
+          "name": "entityRenderer",
+          "obfuscatedName": "entityRenderer",
+          "signature": "Lnet/minecraft/client/renderer/EntityRenderer;",
+          "static": false
+        },
+        {
+          "name": "session",
+          "obfuscatedName": "session",
+          "signature": "Lnet/minecraft/util/Session;",
+          "static": false
+        },
+        {
+          "name": "objectMouseOver",
+          "obfuscatedName": "objectMouseOver",
+          "signature": "Lnet/minecraft/util/MovingObjectPosition;",
+          "static": false
+        },
+        {
+          "name": "playerController",
+          "obfuscatedName": "playerController",
+          "signature": "Lnet/minecraft/client/multiplayer/PlayerControllerMP;",
+          "static": false,
+          "binding": "MINECRAFT_GET_PLAYER_CONTROLLER",
+          "required": true
+        },
+        {
+          "name": "inGameHasFocus",
+          "obfuscatedName": "inGameHasFocus",
+          "signature": "Z",
+          "static": false,
+          "aliases": [
+            "field_71415_G"
+          ]
+        },
+        {
+          "name": "leftClickCounter",
+          "obfuscatedName": "leftClickCounter",
+          "signature": "I",
+          "static": false,
+          "aliases": [
+            "field_71429_W"
+          ]
+        },
+        {
+          "name": "rightClickDelayTimer",
+          "obfuscatedName": "rightClickDelayTimer",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "displayWidth",
+          "obfuscatedName": "displayWidth",
+          "signature": "I",
+          "static": false,
+          "binding": "MINECRAFT_DISPLAY_WIDTH",
+          "required": true
+        },
+        {
+          "name": "displayHeight",
+          "obfuscatedName": "displayHeight",
+          "signature": "I",
+          "static": false,
+          "binding": "MINECRAFT_DISPLAY_HEIGHT",
+          "required": true
+        },
+        {
+          "name": "renderGlobal",
+          "obfuscatedName": "renderGlobal",
+          "signature": "Lnet/minecraft/client/renderer/RenderGlobal;",
+          "aliases": [
+            "field_71438_f"
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "name": "runTick",
+          "obfuscatedName": "runTick",
+          "signature": "()V",
+          "static": false
+        },
+        {
+          "name": "getNetHandler",
+          "obfuscatedName": "getNetHandler",
+          "signature": "()Lnet/minecraft/client/network/NetHandlerPlayClient;",
+          "static": false,
+          "binding": "MINECRAFT_NET_HANDLER",
+          "required": true
+        },
+        {
+          "name": "displayGuiScreen",
+          "obfuscatedName": "displayGuiScreen",
+          "signature": "(Lnet/minecraft/client/gui/GuiScreen;)V",
+          "static": false
+        },
+        {
+          "name": "getTextureManager",
+          "obfuscatedName": "getTextureManager",
+          "signature": "()Lnet/minecraft/client/renderer/texture/TextureManager;",
+          "static": false
+        },
+        {
+          "name": "getTextureMapBlocks",
+          "obfuscatedName": "getTextureMapBlocks",
+          "signature": "()Lnet/minecraft/client/renderer/texture/TextureMap;",
+          "static": false
+        },
+        {
+          "name": "getRenderItem",
+          "obfuscatedName": "getRenderItem",
+          "signature": "()Lnet/minecraft/client/renderer/entity/RenderItem;",
+          "static": false
+        },
+        {
+          "name": "clickMouse",
+          "obfuscatedName": "clickMouse",
+          "signature": "()V",
+          "static": false,
+          "aliases": [
+            "func_147116_af"
+          ]
+        },
+        {
+          "name": "setIngameFocus",
+          "obfuscatedName": "setIngameFocus",
+          "signature": "()V",
+          "static": false,
+          "aliases": [
+            "func_71381_h"
+          ]
+        },
+        {
+          "name": "setIngameNotInFocus",
+          "obfuscatedName": "setIngameNotInFocus",
+          "signature": "()V",
+          "static": false,
+          "aliases": [
+            "func_71364_i"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NetHandlerPlayClient",
+      "obfuscatedName": "net/minecraft/client/network/NetHandlerPlayClient",
+      "fields": [
+        {
+          "name": "playerInfoMap",
+          "obfuscatedName": "playerInfoMap",
+          "signature": "Ljava/util/Map;",
+          "static": false,
+          "aliases": [
+            "field_175106_d"
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "name": "addToSendQueue",
+          "obfuscatedName": "addToSendQueue",
+          "signature": "(Lnet/minecraft/network/Packet;)V",
+          "static": false,
+          "binding": "NET_HANDLER_ADD_TO_SEND_QUEUE",
+          "required": true
+        },
+        {
+          "name": "getPlayerInfo",
+          "obfuscatedName": "getPlayerInfo",
+          "signature": "(Ljava/util/UUID;)Lnet/minecraft/client/network/NetworkPlayerInfo;",
+          "static": false
+        },
+        {
+          "name": "getNetworkManager",
+          "obfuscatedName": "getNetworkManager",
+          "signature": "()Lnet/minecraft/network/NetworkManager;",
+          "static": false,
+          "binding": "NET_HANDLER_GET_NETWORK_MANAGER",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "NetworkPlayerInfo",
+      "obfuscatedName": "net/minecraft/client/network/NetworkPlayerInfo",
+      "fields": [
+        {
+          "name": "gameProfile",
+          "obfuscatedName": "gameProfile",
+          "signature": "Lcom/mojang/authlib/GameProfile;",
+          "static": false
+        },
+        {
+          "name": "responseTime",
+          "obfuscatedName": "responseTime",
+          "signature": "I",
+          "static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(Lcom/mojang/authlib/GameProfile;)V",
+          "static": false
+        },
+        {
+          "name": "getPlayerTeam",
+          "obfuscatedName": "getPlayerTeam",
+          "signature": "()Lnet/minecraft/scoreboard/ScorePlayerTeam;",
+          "static": false,
+          "aliases": [
+            "func_178850_i"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MovingObjectPosition",
+      "obfuscatedName": "net/minecraft/util/MovingObjectPosition",
+      "fields": [
+        {
+          "name": "typeOfHit",
+          "obfuscatedName": "typeOfHit",
+          "signature": "Lnet/minecraft/util/MovingObjectPosition$MovingObjectType;",
+          "static": false
+        },
+        {
+          "name": "hitVec",
+          "obfuscatedName": "hitVec",
+          "signature": "Lnet/minecraft/util/Vec3;",
+          "static": false
+        },
+        {
+          "name": "entityHit",
+          "obfuscatedName": "entityHit",
+          "signature": "Lnet/minecraft/entity/Entity;",
+          "static": false
+        },
+        {
+          "name": "blockPos",
+          "obfuscatedName": "blockPos",
+          "signature": "Lnet/minecraft/util/BlockPos;",
+          "static": false
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "MovingObjectPosition_MovingObjectType",
+      "obfuscatedName": "net/minecraft/util/MovingObjectPosition$MovingObjectType",
+      "fields": [
+        {
+          "name": "BLOCK",
+          "obfuscatedName": "BLOCK",
+          "signature": "Lnet/minecraft/util/MovingObjectPosition$MovingObjectType;",
+          "static": true
+        },
+        {
+          "name": "ENTITY",
+          "obfuscatedName": "ENTITY",
+          "signature": "Lnet/minecraft/util/MovingObjectPosition$MovingObjectType;",
+          "static": true
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "EntityPlayerSP",
+      "obfuscatedName": "net/minecraft/client/entity/EntityPlayerSP",
+      "fields": [
+        {
+          "name": "posX",
+          "obfuscatedName": "posX",
+          "signature": "D",
+          "static": false
+        },
+        {
+          "name": "posY",
+          "obfuscatedName": "posY",
+          "signature": "D",
+          "static": false
+        },
+        {
+          "name": "posZ",
+          "obfuscatedName": "posZ",
+          "signature": "D",
+          "static": false
+        },
+        {
+          "name": "rotationYaw",
+          "obfuscatedName": "rotationYaw",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "rotationPitch",
+          "obfuscatedName": "rotationPitch",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "timeInPortal",
+          "obfuscatedName": "timeInPortal",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "prevTimeInPortal",
+          "obfuscatedName": "prevTimeInPortal",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "movementInput",
+          "obfuscatedName": "movementInput",
+          "signature": "Lnet/minecraft/util/MovementInput;",
+          "static": false,
+          "binding": "ENTITY_PLAYER_MOVEMENT_INPUT",
+          "required": true,
+          "aliases": [
+            "field_71158_b"
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "name": "onUpdateWalkingPlayer",
+          "obfuscatedName": "onUpdateWalkingPlayer",
+          "signature": "()V",
+          "static": false
+        },
+        {
+          "name": "setSprinting",
+          "obfuscatedName": "setSprinting",
+          "signature": "(Z)V",
+          "static": false,
+          "binding": "ENTITY_PLAYER_SP_SET_SPRINTING",
+          "required": true,
+          "aliases": [
+            "func_70031_b"
+          ]
+        },
+        {
+          "name": "dropOneItem",
+          "obfuscatedName": "dropOneItem",
+          "signature": "(Z)Lnet/minecraft/entity/item/EntityItem;",
+          "static": false
+        },
+        {
+          "name": "sendChatMessage",
+          "obfuscatedName": "sendChatMessage",
+          "signature": "(Ljava/lang/String;)V",
+          "static": false
+        },
+        {
+          "name": "addChatMessage",
+          "obfuscatedName": "addChatMessage",
+          "signature": "(Lnet/minecraft/util/IChatComponent;)V",
+          "static": false
+        },
+        {
+          "name": "closeScreen",
+          "obfuscatedName": "closeScreen",
+          "signature": "()V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "WorldClient",
+      "obfuscatedName": "net/minecraft/client/multiplayer/WorldClient",
+      "fields": [
+        {
+          "name": "playerEntities",
+          "obfuscatedName": "playerEntities",
+          "signature": "Ljava/util/List;",
+          "static": false,
+          "binding": "ENTITY_LIST_FIELD",
+          "required": true
+        },
+        {
+          "name": "clientChunkProvider",
+          "obfuscatedName": "clientChunkProvider",
+          "signature": "Lnet/minecraft/client/multiplayer/ChunkProviderClient;",
+          "static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "removeTileEntity",
+          "obfuscatedName": "removeTileEntity",
+          "signature": "(Lnet/minecraft/util/BlockPos;)V",
+          "static": false
+        },
+        {
+          "name": "setBlockState",
+          "obfuscatedName": "setBlockState",
+          "signature": "(Lnet/minecraft/util/BlockPos;Lnet/minecraft/block/state/IBlockState;I)Z",
+          "static": false
+        },
+        {
+          "name": "getBlockState",
+          "obfuscatedName": "getBlockState",
+          "signature": "(Lnet/minecraft/util/BlockPos;)Lnet/minecraft/block/state/IBlockState;",
+          "static": false
+        },
+        {
+          "name": "getEntityByID",
+          "obfuscatedName": "getEntityByID",
+          "signature": "(I)Lnet/minecraft/entity/Entity;",
+          "static": false
+        },
+        {
+          "name": "addEntityToWorld",
+          "obfuscatedName": "addEntityToWorld",
+          "signature": "(ILnet/minecraft/entity/Entity;)V",
+          "static": false
+        },
+        {
+          "name": "removeEntityFromWorld",
+          "obfuscatedName": "removeEntityFromWorld",
+          "signature": "(I)Lnet/minecraft/entity/Entity;",
+          "static": false
+        },
+        {
+          "name": "playSound",
+          "obfuscatedName": "playSound",
+          "signature": "(DDDLjava/lang/String;FFZ)V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "World",
+      "obfuscatedName": "net/minecraft/world/World",
+      "fields": [
+        {
+          "name": "loadedEntityList",
+          "obfuscatedName": "loadedEntityList",
+          "signature": "Ljava/util/List;",
+          "static": false,
+          "binding": "WORLD_LOADED_ENTITY_LIST",
+          "required": true
+        }
+      ],
+      "methods": [
+        {
+          "name": "rayTraceBlocks",
+          "obfuscatedName": "rayTraceBlocks",
+          "signature": "(Lnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;)Lnet/minecraft/util/MovingObjectPosition;",
+          "static": false
+        },
+        {
+          "name": "spawnParticle",
+          "obfuscatedName": "spawnParticle",
+          "signature": "(IZDDDDDD[I)V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "Chunk",
+      "obfuscatedName": "net/minecraft/world/chunk/Chunk",
+      "fields": [
+        {
+          "name": "chunkTileEntityMap",
+          "obfuscatedName": "chunkTileEntityMap",
+          "signature": "Ljava/util/Map;",
+          "static": false
+        },
+        {
+          "name": "xPosition",
+          "obfuscatedName": "xPosition",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "zPosition",
+          "obfuscatedName": "zPosition",
+          "signature": "I",
+          "static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "onChunkLoad",
+          "obfuscatedName": "onChunkLoad",
+          "signature": "()V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "ChunkProviderClient",
+      "obfuscatedName": "net/minecraft/client/multiplayer/ChunkProviderClient",
+      "fields": [],
+      "methods": [
+        {
+          "name": "unloadChunk",
+          "obfuscatedName": "unloadChunk",
+          "signature": "(II)V",
+          "static": false
+        },
+        {
+          "name": "provideChunk",
+          "obfuscatedName": "provideChunk",
+          "signature": "(II)Lnet/minecraft/world/chunk/Chunk;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "BlockPos",
+      "obfuscatedName": "net/minecraft/util/BlockPos",
+      "fields": [
+        {
+          "name": "x",
+          "obfuscatedName": "x",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "y",
+          "obfuscatedName": "y",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "z",
+          "obfuscatedName": "z",
+          "signature": "I",
+          "static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(III)V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "FoodStats",
+      "obfuscatedName": "net/minecraft/util/FoodStats",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getFoodLevel",
+          "obfuscatedName": "getFoodLevel",
+          "signature": "()I",
+          "static": false,
+          "aliases": [
+            "func_75116_a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IBlockState",
+      "obfuscatedName": "net/minecraft/block/state/IBlockState",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getBlock",
+          "obfuscatedName": "getBlock",
+          "signature": "()Lnet/minecraft/block/Block;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "Block",
+      "obfuscatedName": "net/minecraft/block/Block",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getIdFromBlock",
+          "obfuscatedName": "getIdFromBlock",
+          "signature": "(Lnet/minecraft/block/Block;)I",
+          "static": true
+        },
+        {
+          "name": "getMetaFromState",
+          "obfuscatedName": "getMetaFromState",
+          "signature": "(Lnet/minecraft/block/state/IBlockState;)I",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "TileEntity",
+      "obfuscatedName": "net/minecraft/tileentity/TileEntity",
+      "fields": [
+        {
+          "name": "pos",
+          "obfuscatedName": "pos",
+          "signature": "Lnet/minecraft/util/BlockPos;",
+          "static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "getPos",
+          "obfuscatedName": "getPos",
+          "signature": "()Lnet/minecraft/util/BlockPos;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "Map",
+      "obfuscatedName": "java/util/Map",
+      "noClassLoader": true,
+      "fields": [],
+      "methods": [
+        {
+          "name": "values",
+          "obfuscatedName": "values",
+          "signature": "()Ljava/util/Collection;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "Collection",
+      "obfuscatedName": "java/util/Collection",
+      "noClassLoader": true,
+      "fields": [],
+      "methods": [
+        {
+          "name": "toArray",
+          "obfuscatedName": "toArray",
+          "signature": "()[Ljava/lang/Object;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "RenderGlobal",
+      "obfuscatedName": "net/minecraft/client/renderer/RenderGlobal",
+      "fields": [],
+      "methods": [
+        {
+          "name": "renderEntities",
+          "obfuscatedName": "renderEntities",
+          "signature": "(Lnet/minecraft/entity/Entity;Lnet/minecraft/client/renderer/culling/ICamera;F)V",
+          "static": false,
+          "aliases": [
+            "func_180446_a"
+          ]
+        },
+        {
+          "name": "loadRenderers",
+          "obfuscatedName": "loadRenderers",
+          "signature": "()V",
+          "aliases": [
+            "func_72712_a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Timer",
+      "obfuscatedName": "net/minecraft/util/Timer",
+      "fields": [
+        {
+          "name": "renderPartialTicks",
+          "obfuscatedName": "renderPartialTicks",
+          "signature": "F",
+          "static": false
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "GuiScreen",
+      "obfuscatedName": "net/minecraft/client/gui/GuiScreen",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "GuiContainer",
+      "obfuscatedName": "net/minecraft/client/gui/inventory/GuiContainer",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getSlotAtPosition",
+          "obfuscatedName": "getSlotAtPosition",
+          "signature": "(II)Lnet/minecraft/inventory/Slot;",
+          "static": false
+        },
+        {
+          "name": "handleMouseClick",
+          "obfuscatedName": "handleMouseClick",
+          "signature": "(Lnet/minecraft/inventory/Slot;III)V",
+          "static": false
+        },
+        {
+          "name": "mouseClicked",
+          "obfuscatedName": "mouseClicked",
+          "signature": "(III)V",
+          "static": false
+        },
+        {
+          "name": "mouseClickMove",
+          "obfuscatedName": "mouseClickMove",
+          "signature": "(IIIJ)V",
+          "static": false
+        },
+        {
+          "name": "mouseReleased",
+          "obfuscatedName": "mouseReleased",
+          "signature": "(III)V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "GuiChat",
+      "obfuscatedName": "net/minecraft/client/gui/GuiChat",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "GuiChest",
+      "obfuscatedName": "net/minecraft/client/gui/inventory/GuiChest",
+      "fields": [
+        {
+          "name": "lowerChestInventory",
+          "obfuscatedName": "lowerChestInventory",
+          "signature": "Lnet/minecraft/inventory/IInventory;",
+          "static": false
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "GuiInventory",
+      "obfuscatedName": "net/minecraft/client/gui/inventory/GuiInventory",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "GuiIngameMenu",
+      "obfuscatedName": "net/minecraft/client/gui/GuiIngameMenu",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "GameSettings",
+      "obfuscatedName": "net/minecraft/client/settings/GameSettings",
+      "fields": [
+        {
+          "name": "thirdPersonView",
+          "obfuscatedName": "thirdPersonView",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "debugCamEnable",
+          "obfuscatedName": "debugCamEnable",
+          "signature": "Z",
+          "static": false
+        },
+        {
+          "name": "pauseOnLostFocus",
+          "obfuscatedName": "pauseOnLostFocus",
+          "signature": "Z",
+          "static": false
+        },
+        {
+          "name": "keyBindSneak",
+          "obfuscatedName": "keyBindSneak",
+          "signature": "Lnet/minecraft/client/settings/KeyBinding;",
+          "static": false
+        },
+        {
+          "name": "keyBindForward",
+          "obfuscatedName": "keyBindForward",
+          "signature": "Lnet/minecraft/client/settings/KeyBinding;",
+          "static": false
+        },
+        {
+          "name": "keyBindBack",
+          "obfuscatedName": "keyBindBack",
+          "signature": "Lnet/minecraft/client/settings/KeyBinding;",
+          "static": false
+        },
+        {
+          "name": "keyBindLeft",
+          "obfuscatedName": "keyBindLeft",
+          "signature": "Lnet/minecraft/client/settings/KeyBinding;",
+          "static": false
+        },
+        {
+          "name": "keyBindRight",
+          "obfuscatedName": "keyBindRight",
+          "signature": "Lnet/minecraft/client/settings/KeyBinding;",
+          "static": false
+        },
+        {
+          "name": "mouseSensitivity",
+          "obfuscatedName": "mouseSensitivity",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "keyBindAttack",
+          "obfuscatedName": "keyBindAttack",
+          "signature": "Lnet/minecraft/client/settings/KeyBinding;",
+          "static": false
+        },
+        {
+          "name": "keyBindJump",
+          "obfuscatedName": "keyBindJump",
+          "signature": "Lnet/minecraft/client/settings/KeyBinding;",
+          "static": false
+        },
+        {
+          "name": "keyBindSprint",
+          "obfuscatedName": "keyBindSprint",
+          "signature": "Lnet/minecraft/client/settings/KeyBinding;",
+          "static": false,
+          "binding": "GAME_SETTINGS_KEY_BIND_SPRINT",
+          "required": true,
+          "aliases": [
+            "field_151444_V"
+          ]
+        },
+        {
+          "name": "keyBindUseItem",
+          "obfuscatedName": "keyBindUseItem",
+          "signature": "Lnet/minecraft/client/settings/KeyBinding;",
+          "static": false,
+          "aliases": [
+            "field_74313_G"
+          ]
+        },
+        {
+          "name": "gammaSetting",
+          "obfuscatedName": "gammaSetting",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "fancyGraphics",
+          "obfuscatedName": "fancyGraphics",
+          "signature": "Z",
+          "aliases": [
+            "field_74347_j"
+          ]
+        },
+        {
+          "name": "ambientOcclusion",
+          "obfuscatedName": "ambientOcclusion",
+          "signature": "I",
+          "aliases": [
+            "field_74348_k"
+          ]
+        },
+        {
+          "name": "particleSetting",
+          "obfuscatedName": "particleSetting",
+          "signature": "I",
+          "aliases": [
+            "field_74362_aa"
+          ]
+        },
+        {
+          "name": "renderDistanceChunks",
+          "obfuscatedName": "renderDistanceChunks",
+          "signature": "I",
+          "aliases": [
+            "field_151451_c"
+          ]
+        },
+        {
+          "name": "entityShadows",
+          "obfuscatedName": "entityShadows",
+          "signature": "Z",
+          "aliases": [
+            "field_181151_V"
+          ]
+        },
+        {
+          "name": "clouds",
+          "obfuscatedName": "clouds",
+          "signature": "I",
+          "aliases": [
+            "field_74360_ac"
+          ]
+        },
+        {
+          "name": "ofFastRender",
+          "obfuscatedName": "ofFastRender",
+          "signature": "Z"
+        },
+        {
+          "name": "ofFastMath",
+          "obfuscatedName": "ofFastMath",
+          "signature": "Z"
+        },
+        {
+          "name": "ofSmoothFps",
+          "obfuscatedName": "ofSmoothFps",
+          "signature": "Z"
+        },
+        {
+          "name": "ofAnimatedWater",
+          "obfuscatedName": "ofAnimatedWater",
+          "signature": "I"
+        },
+        {
+          "name": "ofAnimatedLava",
+          "obfuscatedName": "ofAnimatedLava",
+          "signature": "I"
+        },
+        {
+          "name": "ofAnimatedFire",
+          "obfuscatedName": "ofAnimatedFire",
+          "signature": "Z"
+        },
+        {
+          "name": "ofAnimatedPortal",
+          "obfuscatedName": "ofAnimatedPortal",
+          "signature": "Z"
+        },
+        {
+          "name": "ofAnimatedExplosion",
+          "obfuscatedName": "ofAnimatedExplosion",
+          "signature": "Z"
+        },
+        {
+          "name": "ofAnimatedSmoke",
+          "obfuscatedName": "ofAnimatedSmoke",
+          "signature": "Z"
+        },
+        {
+          "name": "ofClouds",
+          "obfuscatedName": "ofClouds",
+          "signature": "I",
+          "static": false
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "Entity",
+      "obfuscatedName": "net/minecraft/entity/Entity",
+      "fields": [
+        {
+          "name": "entityId",
+          "obfuscatedName": "entityId",
+          "signature": "I",
+          "static": false,
+          "binding": "ENTITY_ID_FIELD",
+          "required": true
+        },
+        {
+          "name": "posX",
+          "obfuscatedName": "posX",
+          "signature": "D",
+          "static": false,
+          "binding": "ENTITY_POS_X",
+          "required": true
+        },
+        {
+          "name": "posY",
+          "obfuscatedName": "posY",
+          "signature": "D",
+          "static": false,
+          "binding": "ENTITY_POS_Y",
+          "required": true
+        },
+        {
+          "name": "posZ",
+          "obfuscatedName": "posZ",
+          "signature": "D",
+          "static": false,
+          "binding": "ENTITY_POS_Z",
+          "required": true
+        },
+        {
+          "name": "motionX",
+          "obfuscatedName": "motionX",
+          "signature": "D",
+          "static": false,
+          "binding": "ENTITY_MOTION_X",
+          "required": true
+        },
+        {
+          "name": "motionY",
+          "obfuscatedName": "motionY",
+          "signature": "D",
+          "static": false,
+          "binding": "ENTITY_MOTION_Y",
+          "required": true
+        },
+        {
+          "name": "motionZ",
+          "obfuscatedName": "motionZ",
+          "signature": "D",
+          "static": false,
+          "binding": "ENTITY_MOTION_Z",
+          "required": true
+        },
+        {
+          "name": "prevPosX",
+          "obfuscatedName": "prevPosX",
+          "signature": "D",
+          "static": false
+        },
+        {
+          "name": "prevPosY",
+          "obfuscatedName": "prevPosY",
+          "signature": "D",
+          "static": false
+        },
+        {
+          "name": "prevPosZ",
+          "obfuscatedName": "prevPosZ",
+          "signature": "D",
+          "static": false
+        },
+        {
+          "name": "height",
+          "obfuscatedName": "height",
+          "signature": "F",
+          "static": false,
+          "binding": "ENTITY_HEIGHT_FIELD",
+          "required": true
+        },
+        {
+          "name": "width",
+          "obfuscatedName": "width",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "rotationYaw",
+          "obfuscatedName": "rotationYaw",
+          "signature": "F",
+          "static": false,
+          "binding": "ENTITY_ROTATION_YAW",
+          "required": true,
+          "aliases": [
+            "field_70177_z"
+          ]
+        },
+        {
+          "name": "rotationPitch",
+          "obfuscatedName": "rotationPitch",
+          "signature": "F",
+          "static": false,
+          "binding": "ENTITY_ROTATION_PITCH",
+          "required": true
+        },
+        {
+          "name": "prevRotationYaw",
+          "obfuscatedName": "prevRotationYaw",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "prevRotationPitch",
+          "obfuscatedName": "prevRotationPitch",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "onGround",
+          "obfuscatedName": "onGround",
+          "signature": "Z",
+          "static": false,
+          "binding": "ENTITY_ON_GROUND",
+          "required": true,
+          "aliases": [
+            "field_70122_E"
+          ]
+        },
+        {
+          "name": "ticksExisted",
+          "obfuscatedName": "ticksExisted",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "renderDistanceWeight",
+          "obfuscatedName": "renderDistanceWeight",
+          "signature": "D",
+          "static": false
+        },
+        {
+          "name": "stepHeight",
+          "obfuscatedName": "stepHeight",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "noClip",
+          "obfuscatedName": "noClip",
+          "signature": "Z",
+          "static": false
+        },
+        {
+          "name": "isDead",
+          "obfuscatedName": "isDead",
+          "signature": "Z",
+          "static": false,
+          "binding": "ENTITY_IS_DEAD",
+          "required": true
+        },
+        {
+          "name": "isInWeb",
+          "obfuscatedName": "isInWeb",
+          "signature": "Z",
+          "static": false,
+          "binding": "ISINWEB",
+          "required": true
+        },
+        {
+          "name": "lastTickPosX",
+          "obfuscatedName": "lastTickPosX",
+          "signature": "D",
+          "static": false,
+          "aliases": [
+            "field_70142_S"
+          ]
+        },
+        {
+          "name": "lastTickPosY",
+          "obfuscatedName": "lastTickPosY",
+          "signature": "D",
+          "static": false,
+          "aliases": [
+            "field_70137_T"
+          ]
+        },
+        {
+          "name": "lastTickPosZ",
+          "obfuscatedName": "lastTickPosZ",
+          "signature": "D",
+          "static": false,
+          "aliases": [
+            "field_70136_U"
+          ]
+        },
+        {
+          "name": "isCollidedHorizontally",
+          "obfuscatedName": "isCollidedHorizontally",
+          "signature": "Z",
+          "static": false,
+          "aliases": [
+            "field_70123_F"
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "name": "getName",
+          "obfuscatedName": "getName",
+          "signature": "()Ljava/lang/String;",
+          "static": false,
+          "binding": "ENTITY_PLAYER_GET_NAME",
+          "required": true,
+          "aliases": [
+            "func_70005_c_"
+          ]
+        },
+        {
+          "name": "getDisplayName",
+          "obfuscatedName": "getDisplayName",
+          "signature": "()Lnet/minecraft/util/IChatComponent;",
+          "static": false,
+          "binding": "ENTITY_PLAYER_GET_DISPLAY_NAME",
+          "required": true,
+          "aliases": [
+            "func_145748_c_"
+          ]
+        },
+        {
+          "name": "setAngles",
+          "obfuscatedName": "setAngles",
+          "signature": "(FF)V",
+          "static": false
+        },
+        {
+          "name": "getUniqueID",
+          "obfuscatedName": "getUniqueID",
+          "signature": "()Ljava/util/UUID;",
+          "static": false,
+          "binding": "ENTITY_GET_UNIQUE_ID",
+          "required": true
+        },
+        {
+          "name": "isInvisible",
+          "obfuscatedName": "isInvisible",
+          "signature": "()Z",
+          "static": false,
+          "binding": "ENTITY_IS_INVISIBLE",
+          "required": true
+        },
+        {
+          "name": "canBeCollidedWith",
+          "obfuscatedName": "canBeCollidedWith",
+          "signature": "()Z",
+          "static": false,
+          "binding": "ENTITY_CAN_BE_COLLIDED_WITH",
+          "required": true
+        },
+        {
+          "name": "setPosition",
+          "obfuscatedName": "setPosition",
+          "signature": "(DDD)V",
+          "static": false
+        },
+        {
+          "name": "moveEntity",
+          "obfuscatedName": "moveEntity",
+          "signature": "(DDD)V",
+          "static": false
+        },
+        {
+          "name": "isSprinting",
+          "obfuscatedName": "isSprinting",
+          "signature": "()Z",
+          "static": false,
+          "binding": "ENTITY_IS_SPRINTING",
+          "required": true,
+          "aliases": [
+            "func_70051_ag"
+          ]
+        },
+        {
+          "name": "setCurrentItemOrArmor",
+          "obfuscatedName": "setCurrentItemOrArmor",
+          "signature": "(ILnet/minecraft/item/ItemStack;)V",
+          "static": false
+        },
+        {
+          "name": "setLocationAndAngles",
+          "obfuscatedName": "setLocationAndAngles",
+          "signature": "(DDDFF)V",
+          "static": false
+        },
+        {
+          "name": "isSneaking",
+          "obfuscatedName": "isSneaking",
+          "signature": "()Z",
+          "static": false,
+          "binding": "ENTITY_IS_SNEAKING",
+          "required": true
+        },
+        {
+          "name": "getBrightnessForRender",
+          "obfuscatedName": "getBrightnessForRender",
+          "signature": "(F)I",
+          "static": false
+        },
+        {
+          "name": "isInWater",
+          "obfuscatedName": "isInWater",
+          "signature": "()Z",
+          "static": false,
+          "binding": "ENTITY_IS_IN_WATER",
+          "required": true,
+          "aliases": [
+            "func_70090_H"
+          ]
+        },
+        {
+          "name": "getEntityBoundingBox",
+          "obfuscatedName": "getEntityBoundingBox",
+          "signature": "()Lnet/minecraft/util/AxisAlignedBB;",
+          "static": false,
+          "binding": "ENTITY_GET_BOUNDING_BOX",
+          "required": true
+        },
+        {
+          "name": "getPositionVector",
+          "obfuscatedName": "getPositionVector",
+          "signature": "()Lnet/minecraft/util/Vec3;",
+          "static": false,
+          "binding": "ENTITY_GET_POSITION",
+          "required": true
+        },
+        {
+          "name": "getEyeHeight",
+          "obfuscatedName": "getEyeHeight",
+          "signature": "()F",
+          "static": false,
+          "binding": "ENTITY_GET_EYE_HEIGHT",
+          "required": true
+        }
+      ],
+      "binding": "ENTITY_CLASS",
+      "required": true
+    },
+    {
+      "name": "EntityLivingBase",
+      "obfuscatedName": "net/minecraft/entity/EntityLivingBase",
+      "fields": [
+        {
+          "name": "hurtTime",
+          "obfuscatedName": "hurtTime",
+          "signature": "I",
+          "static": false,
+          "aliases": [
+            "field_70737_aN"
+          ]
+        },
+        {
+          "name": "hurtResistantTime",
+          "obfuscatedName": "hurtResistantTime",
+          "signature": "I",
+          "static": false,
+          "binding": "ENTITY_LIVING_HURT_RESISTANT_TIME",
+          "required": true
+        },
+        {
+          "name": "limbSwingAmount",
+          "obfuscatedName": "limbSwingAmount",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "isSwingInProgress",
+          "obfuscatedName": "isSwingInProgress",
+          "signature": "Z",
+          "static": false
+        },
+        {
+          "name": "rotationYawHead",
+          "obfuscatedName": "rotationYawHead",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "prevRotationYawHead",
+          "obfuscatedName": "prevRotationYawHead",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "renderYawOffset",
+          "obfuscatedName": "renderYawOffset",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "prevRenderYawOffset",
+          "obfuscatedName": "prevRenderYawOffset",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "moveForward",
+          "obfuscatedName": "moveForward",
+          "signature": "F",
+          "static": false,
+          "binding": "MOVE_FORWARD_FIELD",
+          "required": true
+        },
+        {
+          "name": "moveStrafing",
+          "obfuscatedName": "moveStrafing",
+          "signature": "F",
+          "static": false,
+          "binding": "MOVE_STRAFING_FIELD",
+          "required": true
+        },
+        {
+          "name": "jumpTicks",
+          "obfuscatedName": "jumpTicks",
+          "signature": "I",
+          "static": false,
+          "aliases": [
+            "field_70773_bE"
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "name": "canBeCollidedWith",
+          "obfuscatedName": "canBeCollidedWith",
+          "signature": "()Z",
+          "static": false
+        },
+        {
+          "name": "getHeldItem",
+          "obfuscatedName": "getHeldItem",
+          "signature": "()Lnet/minecraft/item/ItemStack;",
+          "static": false,
+          "binding": "ENTITY_PLAYER_GET_CURRENT_ITEM",
+          "required": true
+        },
+        {
+          "name": "getHealth",
+          "obfuscatedName": "getHealth",
+          "signature": "()F",
+          "static": false,
+          "binding": "ENTITY_GET_HEALTH",
+          "required": true
+        },
+        {
+          "name": "swingItem",
+          "obfuscatedName": "swingItem",
+          "signature": "()V",
+          "static": false,
+          "binding": "ENTITY_PLAYER_SWING_ITEM",
+          "required": true
+        },
+        {
+          "name": "updateDistance",
+          "obfuscatedName": "updateDistance",
+          "signature": "(FF)F",
+          "static": false
+        },
+        {
+          "name": "moveEntityWithHeading",
+          "obfuscatedName": "moveEntityWithHeading",
+          "signature": "(FF)V",
+          "static": false
+        },
+        {
+          "name": "getActivePotionEffects",
+          "obfuscatedName": "getActivePotionEffects",
+          "signature": "()Ljava/util/Collection;",
+          "static": false
+        },
+        {
+          "name": "removePotionEffectClient",
+          "obfuscatedName": "removePotionEffectClient",
+          "signature": "(I)V",
+          "static": false
+        },
+        {
+          "name": "getMaxHealth",
+          "obfuscatedName": "getMaxHealth",
+          "signature": "()F",
+          "static": false
+        },
+        {
+          "name": "getEquipmentInSlot",
+          "obfuscatedName": "getEquipmentInSlot",
+          "signature": "(I)Lnet/minecraft/item/ItemStack;",
+          "static": false
+        },
+        {
+          "name": "setHealth",
+          "obfuscatedName": "setHealth",
+          "signature": "(F)V",
+          "static": false
+        },
+        {
+          "name": "handleStatusUpdate",
+          "obfuscatedName": "handleStatusUpdate",
+          "signature": "(B)V",
+          "static": false
+        },
+        {
+          "name": "getSwingProgress",
+          "obfuscatedName": "getSwingProgress",
+          "signature": "(F)F",
+          "static": false
+        },
+        {
+          "name": "getAttributeMap",
+          "obfuscatedName": "getAttributeMap",
+          "signature": "()Lnet/minecraft/entity/ai/attributes/BaseAttributeMap;",
+          "static": false,
+          "binding": "ENTITY_GET_ATTRIBUTE_MAP",
+          "required": true
+        },
+        {
+          "name": "getActivePotionEffect",
+          "obfuscatedName": "getActivePotionEffect",
+          "signature": "(Lnet/minecraft/potion/Potion;)Lnet/minecraft/potion/PotionEffect;",
+          "static": false,
+          "aliases": [
+            "func_70660_b"
+          ]
+        }
+      ],
+      "binding": "ENTITY_LIVING_BASE_CLASS",
+      "required": true
+    },
+    {
+      "name": "EntityPlayer",
+      "obfuscatedName": "net/minecraft/entity/player/EntityPlayer",
+      "fields": [
+        {
+          "name": "inventory",
+          "obfuscatedName": "inventory",
+          "signature": "Lnet/minecraft/entity/player/InventoryPlayer;",
+          "static": false,
+          "binding": "ENTITY_PLAYER_INVENTORY",
+          "required": true
+        },
+        {
+          "name": "inventoryContainer",
+          "obfuscatedName": "inventoryContainer",
+          "signature": "Lnet/minecraft/inventory/Container;",
+          "aliases": [
+            "field_71069_bz"
+          ]
+        },
+        {
+          "name": "openContainer",
+          "obfuscatedName": "openContainer",
+          "signature": "Lnet/minecraft/inventory/Container;",
+          "aliases": [
+            "field_71070_bA"
+          ]
+        },
+        {
+          "name": "itemInUse",
+          "obfuscatedName": "itemInUse",
+          "signature": "Lnet/minecraft/item/ItemStack;",
+          "static": false,
+          "aliases": [
+            "field_71074_e"
+          ]
+        },
+        {
+          "name": "capabilities",
+          "obfuscatedName": "capabilities",
+          "signature": "Lnet/minecraft/entity/player/PlayerCapabilities;",
+          "static": false,
+          "aliases": [
+            "field_71075_bZ"
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "name": "getGameProfile",
+          "obfuscatedName": "getGameProfile",
+          "signature": "()Lcom/mojang/authlib/GameProfile;",
+          "static": false
+        },
+        {
+          "name": "getTotalArmorValue",
+          "obfuscatedName": "getTotalArmorValue",
+          "signature": "()I",
+          "static": false
+        },
+        {
+          "name": "jump",
+          "obfuscatedName": "jump",
+          "signature": "()V",
+          "static": false
+        },
+        {
+          "name": "isUsingItem",
+          "obfuscatedName": "isUsingItem",
+          "signature": "()Z",
+          "static": false,
+          "aliases": [
+            "func_71039_bw"
+          ]
+        },
+        {
+          "name": "getFoodStats",
+          "obfuscatedName": "getFoodStats",
+          "signature": "()Lnet/minecraft/util/FoodStats;",
+          "static": false,
+          "aliases": [
+            "func_71024_bL"
+          ]
+        },
+        {
+          "name": "getItemInUseDuration",
+          "obfuscatedName": "getItemInUseDuration",
+          "signature": "()I",
+          "static": false
+        },
+        {
+          "name": "getTeam",
+          "obfuscatedName": "getTeam",
+          "signature": "()Lnet/minecraft/scoreboard/Team;",
+          "static": false,
+          "aliases": [
+            "func_96124_cp"
+          ]
+        },
+        {
+          "name": "getCurrentArmor",
+          "obfuscatedName": "getCurrentArmor",
+          "signature": "(I)Lnet/minecraft/item/ItemStack;",
+          "static": false,
+          "aliases": [
+            "func_82169_q"
+          ]
+        }
+      ],
+      "binding": "ENTITY_PLAYER_CLASS",
+      "required": true
+    },
+    {
+      "name": "InventoryPlayer",
+      "obfuscatedName": "net/minecraft/entity/player/InventoryPlayer",
+      "fields": [
+        {
+          "name": "mainInventory",
+          "obfuscatedName": "mainInventory",
+          "signature": "[Lnet/minecraft/item/ItemStack;",
+          "static": false
+        },
+        {
+          "name": "currentItem",
+          "obfuscatedName": "currentItem",
+          "signature": "I",
+          "static": false,
+          "aliases": [
+            "field_70461_c"
+          ]
+        },
+        {
+          "name": "armorInventory",
+          "obfuscatedName": "armorInventory",
+          "signature": "[Lnet/minecraft/item/ItemStack;"
+        },
+        {
+          "name": "itemStack",
+          "obfuscatedName": "itemStack",
+          "signature": "Lnet/minecraft/item/ItemStack;",
+          "aliases": [
+            "field_70457_g"
+          ]
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "EnchantmentHelper",
+      "obfuscatedName": "net/minecraft/enchantment/EnchantmentHelper",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getEnchantmentLevel",
+          "obfuscatedName": "getEnchantmentLevel",
+          "signature": "(ILnet/minecraft/item/ItemStack;)I",
+          "static": true
+        }
+      ]
+    },
+    {
+      "name": "ItemStack",
+      "obfuscatedName": "net/minecraft/item/ItemStack",
+      "fields": [
+        {
+          "name": "stackSize",
+          "obfuscatedName": "stackSize",
+          "signature": "I",
+          "static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "getItem",
+          "obfuscatedName": "getItem",
+          "signature": "()Lnet/minecraft/item/Item;",
+          "static": false,
+          "binding": "ITEM_STACK_GET_ITEM",
+          "required": true
+        },
+        {
+          "name": "getItemDamage",
+          "obfuscatedName": "getItemDamage",
+          "signature": "()I",
+          "aliases": [
+            "func_77952_i"
+          ]
+        },
+        {
+          "name": "getMaxDamage",
+          "obfuscatedName": "getMaxDamage",
+          "signature": "()I",
+          "aliases": [
+            "func_77958_k"
+          ]
+        },
+        {
+          "name": "getMaxStackSize",
+          "obfuscatedName": "getMaxStackSize",
+          "signature": "()I",
+          "static": false
+        },
+        {
+          "name": "isItemEqual",
+          "obfuscatedName": "isItemEqual",
+          "signature": "(Lnet/minecraft/item/ItemStack;)Z",
+          "static": false
+        },
+        {
+          "name": "areItemStackTagsEqual",
+          "obfuscatedName": "areItemStackTagsEqual",
+          "signature": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z",
+          "static": true
+        },
+        {
+          "name": "copy",
+          "obfuscatedName": "copy",
+          "signature": "()Lnet/minecraft/item/ItemStack;",
+          "static": false
+        },
+        {
+          "name": "getDisplayName",
+          "obfuscatedName": "getDisplayName",
+          "signature": "()Ljava/lang/String;",
+          "static": false,
+          "aliases": [
+            "func_82833_r"
+          ]
+        },
+        {
+          "name": "hasEffect",
+          "obfuscatedName": "hasEffect",
+          "signature": "()Z",
+          "static": false,
+          "aliases": [
+            "func_77962_s"
+          ]
+        },
+        {
+          "name": "getTagCompound",
+          "obfuscatedName": "getTagCompound",
+          "signature": "()Lnet/minecraft/nbt/NBTTagCompound;",
+          "aliases": [
+            "func_77978_p"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EntityItem",
+      "obfuscatedName": "net/minecraft/entity/item/EntityItem",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getEntityItem",
+          "obfuscatedName": "getEntityItem",
+          "signature": "()Lnet/minecraft/item/ItemStack;",
+          "static": false,
+          "aliases": [
+            "func_92059_d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ItemArmor",
+      "obfuscatedName": "net/minecraft/item/ItemArmor",
+      "fields": [
+        {
+          "name": "armorType",
+          "obfuscatedName": "armorType",
+          "signature": "I",
+          "aliases": [
+            "field_77881_a"
+          ]
+        },
+        {
+          "name": "damageReduceAmount",
+          "obfuscatedName": "damageReduceAmount",
+          "signature": "I",
+          "aliases": [
+            "field_77879_b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ItemBlock",
+      "obfuscatedName": "net/minecraft/item/ItemBlock",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "ItemSword",
+      "obfuscatedName": "net/minecraft/item/ItemSword",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "ItemAxe",
+      "obfuscatedName": "net/minecraft/item/ItemAxe",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "NetworkManager",
+      "obfuscatedName": "net/minecraft/network/NetworkManager",
+      "fields": [
+        {
+          "name": "channel",
+          "obfuscatedName": "channel",
+          "signature": "Lio/netty/channel/Channel;",
+          "static": false,
+          "binding": "NETWORK_MANAGER_CHANNEL",
+          "required": true
+        }
+      ],
+      "methods": [
+        {
+          "name": "channelRead0",
+          "obfuscatedName": "channelRead0",
+          "signature": "(Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/Packet;)V",
+          "static": false
+        },
+        {
+          "name": "getRemoteAddress",
+          "obfuscatedName": "getRemoteAddress",
+          "signature": "()Ljava/net/SocketAddress;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "Packet",
+      "obfuscatedName": "net/minecraft/network/Packet",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "S14PacketEntity",
+      "obfuscatedName": "net/minecraft/network/play/server/S14PacketEntity",
+      "fields": [
+        {
+          "name": "entityId",
+          "obfuscatedName": "entityId",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "posX",
+          "obfuscatedName": "posX",
+          "signature": "B",
+          "static": false
+        },
+        {
+          "name": "posY",
+          "obfuscatedName": "posY",
+          "signature": "B",
+          "static": false
+        },
+        {
+          "name": "posZ",
+          "obfuscatedName": "posZ",
+          "signature": "B",
+          "static": false
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "S18PacketEntityTeleport",
+      "obfuscatedName": "net/minecraft/network/play/server/S18PacketEntityTeleport",
+      "fields": [
+        {
+          "name": "entityId",
+          "obfuscatedName": "entityId",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "posX",
+          "obfuscatedName": "posX",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "posY",
+          "obfuscatedName": "posY",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "posZ",
+          "obfuscatedName": "posZ",
+          "signature": "I",
+          "static": false
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "S19PacketEntityStatus",
+      "obfuscatedName": "net/minecraft/network/play/server/S19PacketEntityStatus",
+      "fields": [
+        {
+          "name": "entityId",
+          "obfuscatedName": "entityId",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "logicOpcode",
+          "obfuscatedName": "logicOpcode",
+          "signature": "B",
+          "static": false
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "S12PacketEntityVelocity",
+      "obfuscatedName": "net/minecraft/network/play/server/S12PacketEntityVelocity",
+      "fields": [
+        {
+          "name": "entityID",
+          "obfuscatedName": "entityID",
+          "signature": "I",
+          "static": false,
+          "aliases": [
+            "field_149417_a"
+          ]
+        },
+        {
+          "name": "motionX",
+          "obfuscatedName": "motionX",
+          "signature": "I",
+          "static": false,
+          "aliases": [
+            "field_149415_b"
+          ]
+        },
+        {
+          "name": "motionY",
+          "obfuscatedName": "motionY",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "motionZ",
+          "obfuscatedName": "motionZ",
+          "signature": "I",
+          "static": false,
+          "aliases": [
+            "field_149416_d"
+          ]
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "S02PacketChat",
+      "obfuscatedName": "net/minecraft/network/play/server/S02PacketChat",
+      "fields": [
+        {
+          "name": "chatComponent",
+          "obfuscatedName": "chatComponent",
+          "signature": "Lnet/minecraft/util/IChatComponent;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "PlayerControllerMP",
+      "obfuscatedName": "net/minecraft/client/multiplayer/PlayerControllerMP",
+      "fields": [],
+      "methods": [
+        {
+          "name": "attackEntity",
+          "obfuscatedName": "attackEntity",
+          "signature": "(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/entity/Entity;)V",
+          "static": false,
+          "binding": "PLAYER_CONTROLLER_ATTACK_ENTITY",
+          "required": true
+        },
+        {
+          "name": "sendUseItem",
+          "obfuscatedName": "sendUseItem",
+          "signature": "(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;)Z",
+          "static": false,
+          "aliases": [
+            "func_78769_a"
+          ]
+        },
+        {
+          "name": "onStoppedUsingItem",
+          "obfuscatedName": "onStoppedUsingItem",
+          "signature": "(Lnet/minecraft/entity/player/EntityPlayer;)V",
+          "static": false
+        },
+        {
+          "name": "windowClick",
+          "obfuscatedName": "windowClick",
+          "signature": "(IIIILnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;",
+          "aliases": [
+            "func_78753_a"
+          ]
+        },
+        {
+          "name": "interactWithEntitySendPacket",
+          "obfuscatedName": "interactWithEntitySendPacket",
+          "signature": "(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/entity/Entity;)Z",
+          "static": false
+        },
+        {
+          "name": "isPlayerRightClickingOnEntity",
+          "obfuscatedName": "isPlayerRightClickingOnEntity",
+          "signature": "(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/entity/Entity;Lnet/minecraft/util/MovingObjectPosition;)Z",
+          "static": false
+        },
+        {
+          "name": "updateController",
+          "obfuscatedName": "updateController",
+          "signature": "()V",
+          "static": false,
+          "aliases": [
+            "func_78765_e"
+          ]
+        }
+      ],
+      "binding": "PLAYER_CONTROLLER_MP_CLASS",
+      "required": true
+    },
+    {
+      "name": "KeyBinding",
+      "obfuscatedName": "net/minecraft/client/settings/KeyBinding",
+      "fields": [
+        {
+          "name": "pressed",
+          "obfuscatedName": "pressed",
+          "signature": "Z",
+          "static": false,
+          "binding": "KEY_BINDING_PRESSED",
+          "required": true,
+          "aliases": [
+            "field_74513_e"
+          ]
+        },
+        {
+          "name": "pressTime",
+          "obfuscatedName": "pressTime",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "keyCode",
+          "obfuscatedName": "keyCode",
+          "signature": "I",
+          "static": false,
+          "aliases": [
+            "field_74512_d"
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "name": "unPressAllKeys",
+          "obfuscatedName": "unPressAllKeys",
+          "signature": "()V",
+          "static": true,
+          "aliases": [
+            "func_74506_a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AbstractClientPlayer",
+      "obfuscatedName": "net/minecraft/client/entity/AbstractClientPlayer",
+      "fields": [
+        {
+          "name": "playerInfo",
+          "obfuscatedName": "playerInfo",
+          "signature": "Lnet/minecraft/client/network/NetworkPlayerInfo;",
+          "static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "getLocationSkin",
+          "obfuscatedName": "getLocationSkin",
+          "signature": "()Lnet/minecraft/util/ResourceLocation;",
+          "static": false
+        },
+        {
+          "name": "getSkinType",
+          "obfuscatedName": "getSkinType",
+          "signature": "()Ljava/lang/String;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "IChatComponent",
+      "obfuscatedName": "net/minecraft/util/IChatComponent",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getFormattedText",
+          "obfuscatedName": "getFormattedText",
+          "signature": "()Ljava/lang/String;",
+          "static": false,
+          "binding": "I_CHAT_COMPONENT_GET_FORMATTED_TEXT",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ChatComponentText",
+      "obfuscatedName": "net/minecraft/util/ChatComponentText",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "List",
+      "obfuscatedName": "java/util/List",
+      "noClassLoader": true,
+      "fields": [],
+      "methods": [
+        {
+          "name": "toArray",
+          "obfuscatedName": "toArray",
+          "signature": "()[Ljava/lang/Object;",
+          "static": false
+        },
+        {
+          "name": "size",
+          "obfuscatedName": "size",
+          "signature": "()I",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "RenderManager",
+      "obfuscatedName": "net/minecraft/client/renderer/entity/RenderManager",
+      "fields": [
+        {
+          "name": "renderPosX",
+          "obfuscatedName": "renderPosX",
+          "signature": "D",
+          "static": false,
+          "aliases": [
+            "field_78725_b"
+          ]
+        },
+        {
+          "name": "renderPosY",
+          "obfuscatedName": "renderPosY",
+          "signature": "D",
+          "static": false,
+          "aliases": [
+            "field_78726_c"
+          ]
+        },
+        {
+          "name": "renderPosZ",
+          "obfuscatedName": "renderPosZ",
+          "signature": "D",
+          "static": false,
+          "aliases": [
+            "field_78723_d"
+          ]
+        },
+        {
+          "name": "playerViewY",
+          "obfuscatedName": "playerViewY",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "playerViewX",
+          "obfuscatedName": "playerViewX",
+          "signature": "F",
+          "static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "cacheActiveRenderInfo",
+          "obfuscatedName": "cacheActiveRenderInfo",
+          "signature": "(Lnet/minecraft/world/World;Lnet/minecraft/client/gui/FontRenderer;Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;Lnet/minecraft/client/settings/GameSettings;F)V",
+          "static": false
+        },
+        {
+          "name": "doRenderEntity",
+          "obfuscatedName": "doRenderEntity",
+          "signature": "(Lnet/minecraft/entity/Entity;DDDFFZ)Z",
+          "static": false,
+          "aliases": [
+            "func_147939_a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FontRenderer",
+      "obfuscatedName": "net/minecraft/client/gui/FontRenderer",
+      "fields": [
+        {
+          "name": "glyphWidth",
+          "obfuscatedName": "glyphWidth",
+          "signature": "[B",
+          "static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "drawStringWithShadow",
+          "obfuscatedName": "drawStringWithShadow",
+          "signature": "(Ljava/lang/String;FFI)I",
+          "static": false
+        },
+        {
+          "name": "getStringWidth",
+          "obfuscatedName": "getStringWidth",
+          "signature": "(Ljava/lang/String;)I",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "Render",
+      "obfuscatedName": "net/minecraft/client/renderer/entity/Render",
+      "fields": [
+        {
+          "name": "renderManager",
+          "obfuscatedName": "renderManager",
+          "signature": "Lnet/minecraft/client/renderer/entity/RenderManager;",
+          "static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "renderLivingLabel",
+          "obfuscatedName": "renderLivingLabel",
+          "signature": "(Lnet/minecraft/entity/Entity;Ljava/lang/String;DDDI)V",
+          "static": false
+        },
+        {
+          "name": "getFontRendererFromRenderManager",
+          "obfuscatedName": "getFontRendererFromRenderManager",
+          "signature": "()Lnet/minecraft/client/gui/FontRenderer;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "RendererLivingEntity",
+      "obfuscatedName": "net/minecraft/client/renderer/entity/RendererLivingEntity",
+      "fields": [],
+      "methods": [
+        {
+          "name": "canRenderName",
+          "obfuscatedName": "canRenderName",
+          "signature": "(Lnet/minecraft/entity/EntityLivingBase;)Z",
+          "static": false,
+          "aliases": [
+            "func_177070_b"
+          ]
+        },
+        {
+          "name": "renderLayers",
+          "obfuscatedName": "renderLayers",
+          "signature": "(Lnet/minecraft/entity/EntityLivingBase;FFFFFFF)V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "RenderPlayer",
+      "obfuscatedName": "net/minecraft/client/renderer/entity/RenderPlayer",
+      "fields": [],
+      "methods": [
+        {
+          "name": "doRender",
+          "obfuscatedName": "doRender",
+          "signature": "(Lnet/minecraft/client/entity/AbstractClientPlayer;DDDFF)V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "EntityRenderer",
+      "obfuscatedName": "net/minecraft/client/renderer/EntityRenderer",
+      "fields": [
+        {
+          "name": "thirdPersonDistance",
+          "obfuscatedName": "thirdPersonDistance",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "thirdPersonDistanceTemp",
+          "obfuscatedName": "thirdPersonDistanceTemp",
+          "signature": "F",
+          "static": false
+        },
+        {
+          "name": "lightmapUpdateNeeded",
+          "obfuscatedName": "lightmapUpdateNeeded",
+          "signature": "Z",
+          "static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "renderHand",
+          "obfuscatedName": "renderHand",
+          "signature": "(FI)V",
+          "static": false
+        },
+        {
+          "name": "orientCamera",
+          "obfuscatedName": "orientCamera",
+          "signature": "(F)V",
+          "static": false
+        },
+        {
+          "name": "hurtCameraEffect",
+          "obfuscatedName": "hurtCameraEffect",
+          "signature": "(F)V",
+          "static": false
+        },
+        {
+          "name": "getMouseOver",
+          "obfuscatedName": "getMouseOver",
+          "signature": "(F)V",
+          "static": false
+        },
+        {
+          "name": "updateLightmap",
+          "obfuscatedName": "updateLightmap",
+          "signature": "(F)V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "GlStateManager",
+      "obfuscatedName": "net/minecraft/client/renderer/GlStateManager",
+      "fields": [],
+      "methods": [
+        {
+          "name": "pushMatrix",
+          "obfuscatedName": "pushMatrix",
+          "signature": "()V",
+          "static": true
+        },
+        {
+          "name": "popMatrix",
+          "obfuscatedName": "popMatrix",
+          "signature": "()V",
+          "static": true
+        },
+        {
+          "name": "translate",
+          "obfuscatedName": "translate",
+          "signature": "(FFF)V",
+          "static": true
+        },
+        {
+          "name": "rotate",
+          "obfuscatedName": "rotate",
+          "signature": "(FFFF)V",
+          "static": true
+        },
+        {
+          "name": "scale",
+          "obfuscatedName": "scale",
+          "signature": "(FFF)V",
+          "static": true
+        },
+        {
+          "name": "disableDepth",
+          "obfuscatedName": "disableDepth",
+          "signature": "()V",
+          "static": true
+        },
+        {
+          "name": "enableDepth",
+          "obfuscatedName": "enableDepth",
+          "signature": "()V",
+          "static": true
+        },
+        {
+          "name": "depthMask",
+          "obfuscatedName": "depthMask",
+          "signature": "(Z)V",
+          "static": true
+        },
+        {
+          "name": "disableLighting",
+          "obfuscatedName": "disableLighting",
+          "signature": "()V",
+          "static": true
+        },
+        {
+          "name": "enableBlend",
+          "obfuscatedName": "enableBlend",
+          "signature": "()V",
+          "static": true
+        },
+        {
+          "name": "disableBlend",
+          "obfuscatedName": "disableBlend",
+          "signature": "()V",
+          "static": true
+        },
+        {
+          "name": "tryBlendFuncSeparate",
+          "obfuscatedName": "tryBlendFuncSeparate",
+          "signature": "(IIII)V",
+          "static": true
+        },
+        {
+          "name": "color",
+          "obfuscatedName": "color",
+          "signature": "(FFFF)V",
+          "static": true
+        },
+        {
+          "name": "disableTexture2D",
+          "obfuscatedName": "disableTexture2D",
+          "signature": "()V",
+          "static": true
+        },
+        {
+          "name": "enableTexture2D",
+          "obfuscatedName": "enableTexture2D",
+          "signature": "()V",
+          "static": true
+        },
+        {
+          "name": "disableAlpha",
+          "obfuscatedName": "disableAlpha",
+          "signature": "()V",
+          "static": true
+        },
+        {
+          "name": "enableAlpha",
+          "obfuscatedName": "enableAlpha",
+          "signature": "()V",
+          "static": true
+        },
+        {
+          "name": "shadeModel",
+          "obfuscatedName": "shadeModel",
+          "signature": "(I)V",
+          "static": true
+        }
+      ]
+    },
+    {
+      "name": "Tessellator",
+      "obfuscatedName": "net/minecraft/client/renderer/Tessellator",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getInstance",
+          "obfuscatedName": "getInstance",
+          "signature": "()Lnet/minecraft/client/renderer/Tessellator;",
+          "static": true
+        },
+        {
+          "name": "getWorldRenderer",
+          "obfuscatedName": "getWorldRenderer",
+          "signature": "()Lnet/minecraft/client/renderer/WorldRenderer;",
+          "static": false
+        },
+        {
+          "name": "draw",
+          "obfuscatedName": "draw",
+          "signature": "()V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "WorldRenderer",
+      "obfuscatedName": "net/minecraft/client/renderer/WorldRenderer",
+      "fields": [],
+      "methods": [
+        {
+          "name": "begin",
+          "obfuscatedName": "begin",
+          "signature": "(ILnet/minecraft/client/renderer/vertex/VertexFormat;)V",
+          "static": false
+        },
+        {
+          "name": "pos",
+          "obfuscatedName": "pos",
+          "signature": "(DDD)Lnet/minecraft/client/renderer/WorldRenderer;",
+          "static": false
+        },
+        {
+          "name": "color",
+          "obfuscatedName": "color",
+          "signature": "(FFFF)Lnet/minecraft/client/renderer/WorldRenderer;",
+          "static": false
+        },
+        {
+          "name": "endVertex",
+          "obfuscatedName": "endVertex",
+          "signature": "()V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "DefaultVertexFormats",
+      "obfuscatedName": "net/minecraft/client/renderer/vertex/DefaultVertexFormats",
+      "fields": [
+        {
+          "name": "POSITION_COLOR",
+          "obfuscatedName": "POSITION_COLOR",
+          "signature": "Lnet/minecraft/client/renderer/vertex/VertexFormat;",
+          "static": true
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "MouseHelper",
+      "obfuscatedName": "net/minecraft/util/MouseHelper",
+      "fields": [],
+      "methods": [
+        {
+          "name": "grabMouseCursor",
+          "obfuscatedName": "grabMouseCursor",
+          "signature": "()V",
+          "static": false
+        },
+        {
+          "name": "ungrabMouseCursor",
+          "obfuscatedName": "ungrabMouseCursor",
+          "signature": "()V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "Session",
+      "obfuscatedName": "net/minecraft/util/Session",
+      "fields": [],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+          "static": false
+        },
+        {
+          "name": "getUsername",
+          "obfuscatedName": "getUsername",
+          "signature": "()Ljava/lang/String;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "GameProfile",
+      "obfuscatedName": "com/mojang/authlib/GameProfile",
+      "fields": [],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(Ljava/util/UUID;Ljava/lang/String;)V",
+          "static": false
+        },
+        {
+          "name": "getId",
+          "obfuscatedName": "getId",
+          "signature": "()Ljava/util/UUID;",
+          "static": false
+        },
+        {
+          "name": "getName",
+          "obfuscatedName": "getName",
+          "signature": "()Ljava/lang/String;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "UUID",
+      "obfuscatedName": "java/util/UUID",
+      "noClassLoader": true,
+      "fields": [],
+      "methods": [
+        {
+          "name": "nameUUIDFromBytes",
+          "obfuscatedName": "nameUUIDFromBytes",
+          "signature": "([B)Ljava/util/UUID;",
+          "static": true
+        },
+        {
+          "name": "fromString",
+          "obfuscatedName": "fromString",
+          "signature": "(Ljava/lang/String;)Ljava/util/UUID;",
+          "static": true
+        },
+        {
+          "name": "toString",
+          "obfuscatedName": "toString",
+          "signature": "()Ljava/lang/String;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "MovementInput",
+      "obfuscatedName": "net/minecraft/util/MovementInput",
+      "fields": [
+        {
+          "name": "moveStrafe",
+          "obfuscatedName": "moveStrafe",
+          "signature": "F",
+          "static": false,
+          "binding": "MOVEMENT_INPUT_STRAFE",
+          "required": true,
+          "aliases": [
+            "field_78902_a"
+          ]
+        },
+        {
+          "name": "moveForward",
+          "obfuscatedName": "moveForward",
+          "signature": "F",
+          "static": false,
+          "binding": "MOVEMENT_INPUT_FORWARD",
+          "required": true,
+          "aliases": [
+            "field_78900_b"
+          ]
+        },
+        {
+          "name": "jump",
+          "obfuscatedName": "jump",
+          "signature": "Z",
+          "static": false,
+          "aliases": [
+            "field_78901_c"
+          ]
+        },
+        {
+          "name": "sneak",
+          "obfuscatedName": "sneak",
+          "signature": "Z",
+          "static": false,
+          "aliases": [
+            "field_78899_d"
+          ]
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "MovementInputFromOptions",
+      "obfuscatedName": "net/minecraft/util/MovementInputFromOptions",
+      "fields": [],
+      "methods": [
+        {
+          "name": "updatePlayerMoveState",
+          "obfuscatedName": "updatePlayerMoveState",
+          "signature": "()V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "Vec3",
+      "obfuscatedName": "net/minecraft/util/Vec3",
+      "fields": [
+        {
+          "name": "xCoord",
+          "obfuscatedName": "xCoord",
+          "signature": "D",
+          "static": false,
+          "binding": "VEC3_X",
+          "required": true
+        },
+        {
+          "name": "yCoord",
+          "obfuscatedName": "yCoord",
+          "signature": "D",
+          "static": false,
+          "binding": "VEC3_Y",
+          "required": true
+        },
+        {
+          "name": "zCoord",
+          "obfuscatedName": "zCoord",
+          "signature": "D",
+          "static": false,
+          "binding": "VEC3_Z",
+          "required": true
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(DDD)V",
+          "static": false,
+          "binding": "VEC3_CONSTRUCTOR",
+          "required": true
+        },
+        {
+          "name": "normalize",
+          "obfuscatedName": "normalize",
+          "signature": "()Lnet/minecraft/util/Vec3;",
+          "static": false,
+          "binding": "VEC3_NORMALIZE",
+          "required": true
+        },
+        {
+          "name": "addVector",
+          "obfuscatedName": "addVector",
+          "signature": "(DDD)Lnet/minecraft/util/Vec3;",
+          "static": false,
+          "binding": "VEC3_ADD_VECTOR",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ScorePlayerTeam",
+      "obfuscatedName": "net/minecraft/scoreboard/ScorePlayerTeam",
+      "fields": [],
+      "methods": [
+        {
+          "name": "formatPlayerName",
+          "obfuscatedName": "formatPlayerName",
+          "signature": "(Lnet/minecraft/scoreboard/Team;Ljava/lang/String;)Ljava/lang/String;",
+          "static": true
+        },
+        {
+          "name": "getRegisteredName",
+          "obfuscatedName": "getRegisteredName",
+          "signature": "()Ljava/lang/String;",
+          "static": false,
+          "aliases": [
+            "func_96661_b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ItemRenderer",
+      "obfuscatedName": "net/minecraft/client/renderer/ItemRenderer",
+      "fields": [],
+      "methods": [
+        {
+          "name": "renderFireInFirstPerson",
+          "obfuscatedName": "renderFireInFirstPerson",
+          "signature": "(F)V",
+          "static": false
+        },
+        {
+          "name": "renderWaterOverlayTexture",
+          "obfuscatedName": "renderWaterOverlayTexture",
+          "signature": "(F)V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "Container",
+      "obfuscatedName": "net/minecraft/inventory/Container",
+      "fields": [
+        {
+          "name": "inventorySlots",
+          "obfuscatedName": "inventorySlots",
+          "signature": "Ljava/util/List;",
+          "static": false
+        },
+        {
+          "name": "windowId",
+          "obfuscatedName": "windowId",
+          "signature": "I",
+          "static": false
+        },
+        {
+          "name": "transactionID",
+          "obfuscatedName": "transactionID",
+          "signature": "S",
+          "static": false,
+          "aliases": [
+            "field_75150_e"
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "name": "getSlot",
+          "obfuscatedName": "getSlot",
+          "signature": "(I)Lnet/minecraft/inventory/Slot;",
+          "static": false,
+          "aliases": [
+            "func_75139_a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Slot",
+      "obfuscatedName": "net/minecraft/inventory/Slot",
+      "fields": [
+        {
+          "name": "slotNumber",
+          "obfuscatedName": "slotNumber",
+          "signature": "I",
+          "static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "getStack",
+          "obfuscatedName": "getStack",
+          "signature": "()Lnet/minecraft/item/ItemStack;",
+          "static": false,
+          "aliases": [
+            "func_75211_c"
+          ]
+        },
+        {
+          "name": "isItemValid",
+          "obfuscatedName": "isItemValid",
+          "signature": "(Lnet/minecraft/item/ItemStack;)Z",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "TextureManager",
+      "obfuscatedName": "net/minecraft/client/renderer/texture/TextureManager",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getTexture",
+          "obfuscatedName": "getTexture",
+          "signature": "(Lnet/minecraft/util/ResourceLocation;)Lnet/minecraft/client/renderer/texture/ITextureObject;",
+          "static": false
+        },
+        {
+          "name": "loadTexture",
+          "obfuscatedName": "loadTexture",
+          "signature": "(Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/client/renderer/texture/ITextureObject;)Z",
+          "static": false
+        },
+        {
+          "name": "deleteTexture",
+          "obfuscatedName": "deleteTexture",
+          "signature": "(Lnet/minecraft/util/ResourceLocation;)V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "ITextureObject",
+      "obfuscatedName": "net/minecraft/client/renderer/texture/ITextureObject",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getGlTextureId",
+          "obfuscatedName": "getGlTextureId",
+          "signature": "()I",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "RenderItem",
+      "obfuscatedName": "net/minecraft/client/renderer/entity/RenderItem",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getItemModelMesher",
+          "obfuscatedName": "getItemModelMesher",
+          "signature": "()Lnet/minecraft/client/renderer/ItemModelMesher;",
+          "static": false
+        },
+        {
+          "name": "renderItemIntoGUI",
+          "obfuscatedName": "renderItemIntoGUI",
+          "signature": "(Lnet/minecraft/item/ItemStack;II)V",
+          "static": false,
+          "aliases": [
+            "func_180450_b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ItemModelMesher",
+      "obfuscatedName": "net/minecraft/client/renderer/ItemModelMesher",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getItemModel",
+          "obfuscatedName": "getItemModel",
+          "signature": "(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/client/resources/model/IBakedModel;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "IBakedModel",
+      "obfuscatedName": "net/minecraft/client/resources/model/IBakedModel",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getParticleTexture",
+          "obfuscatedName": "getParticleTexture",
+          "signature": "()Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "TextureAtlasSprite",
+      "obfuscatedName": "net/minecraft/client/renderer/texture/TextureAtlasSprite",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getMinU",
+          "obfuscatedName": "getMinU",
+          "signature": "()F",
+          "static": false
+        },
+        {
+          "name": "getMaxU",
+          "obfuscatedName": "getMaxU",
+          "signature": "()F",
+          "static": false
+        },
+        {
+          "name": "getMinV",
+          "obfuscatedName": "getMinV",
+          "signature": "()F",
+          "static": false
+        },
+        {
+          "name": "getMaxV",
+          "obfuscatedName": "getMaxV",
+          "signature": "()F",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "obfuscatedName": "net/minecraft/item/Item",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getColorFromItemStack",
+          "obfuscatedName": "getColorFromItemStack",
+          "signature": "(Lnet/minecraft/item/ItemStack;I)I",
+          "static": false
+        },
+        {
+          "name": "getIdFromItem",
+          "obfuscatedName": "getIdFromItem",
+          "signature": "(Lnet/minecraft/item/Item;)I",
+          "static": true,
+          "binding": "ITEM_GET_ID_FROM_ITEM",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "TextureMap",
+      "obfuscatedName": "net/minecraft/client/renderer/texture/TextureMap",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getAtlasSprite",
+          "obfuscatedName": "getAtlasSprite",
+          "signature": "(Ljava/lang/String;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "IWorldNameable",
+      "obfuscatedName": "net/minecraft/world/IWorldNameable",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getDisplayName",
+          "obfuscatedName": "getDisplayName",
+          "signature": "()Lnet/minecraft/util/IChatComponent;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "DynamicTexture",
+      "obfuscatedName": "net/minecraft/client/renderer/texture/DynamicTexture",
+      "fields": [],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(II)V",
+          "static": false
+        },
+        {
+          "name": "getTextureData",
+          "obfuscatedName": "getTextureData",
+          "signature": "()[I",
+          "static": false
+        },
+        {
+          "name": "updateDynamicTexture",
+          "obfuscatedName": "updateDynamicTexture",
+          "signature": "()V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "ResourceLocation",
+      "obfuscatedName": "net/minecraft/util/ResourceLocation",
+      "fields": [],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(Ljava/lang/String;)V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "GuiPlayerTabOverlay",
+      "obfuscatedName": "net/minecraft/client/gui/GuiPlayerTabOverlay",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getPlayerName",
+          "obfuscatedName": "getPlayerName",
+          "signature": "(Lnet/minecraft/client/network/NetworkPlayerInfo;)Ljava/lang/String;",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "S32PacketConfirmTransaction",
+      "obfuscatedName": "net/minecraft/network/play/server/S32PacketConfirmTransaction",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getWindowId",
+          "obfuscatedName": "getWindowId",
+          "signature": "()I",
+          "static": false,
+          "aliases": [
+            "func_148889_c"
+          ]
+        },
+        {
+          "name": "getActionNumber",
+          "obfuscatedName": "getActionNumber",
+          "signature": "()S",
+          "static": false,
+          "aliases": [
+            "func_148890_d"
+          ]
+        },
+        {
+          "name": "accepted",
+          "obfuscatedName": "func_148888_e",
+          "signature": "()Z",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "S30PacketWindowItems",
+      "obfuscatedName": "net/minecraft/network/play/server/S30PacketWindowItems",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getWindowId",
+          "obfuscatedName": "func_148911_c",
+          "signature": "()I",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "S2FPacketSetSlot",
+      "obfuscatedName": "net/minecraft/network/play/server/S2FPacketSetSlot",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getWindowId",
+          "obfuscatedName": "func_149175_c",
+          "signature": "()I",
+          "static": false
+        },
+        {
+          "name": "getSlot",
+          "obfuscatedName": "func_149173_d",
+          "signature": "()I",
+          "static": false,
+          "aliases": [
+            "func_75139_a"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PotionEffect",
+      "obfuscatedName": "net/minecraft/potion/PotionEffect",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getPotionID",
+          "obfuscatedName": "getPotionID",
+          "signature": "()I",
+          "static": false
+        },
+        {
+          "name": "getDuration",
+          "obfuscatedName": "getDuration",
+          "signature": "()I",
+          "static": false
+        },
+        {
+          "name": "getAmplifier",
+          "obfuscatedName": "getAmplifier",
+          "signature": "()I",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "S1DPacketEntityEffect",
+      "obfuscatedName": "net/minecraft/network/play/server/S1DPacketEntityEffect",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getEntityId",
+          "obfuscatedName": "getEntityId",
+          "signature": "()I",
+          "static": false
+        },
+        {
+          "name": "getEffectId",
+          "obfuscatedName": "getEffectId",
+          "signature": "()B",
+          "static": false
+        },
+        {
+          "name": "getAmplifier",
+          "obfuscatedName": "getAmplifier",
+          "signature": "()B",
+          "static": false
+        },
+        {
+          "name": "getDuration",
+          "obfuscatedName": "getDuration",
+          "signature": "()I",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "S09PacketHeldItemChange",
+      "obfuscatedName": "net/minecraft/network/play/server/S09PacketHeldItemChange",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getHeldItemHotbarIndex",
+          "obfuscatedName": "getHeldItemHotbarIndex",
+          "signature": "()I",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "S01PacketJoinGame",
+      "obfuscatedName": "net/minecraft/network/play/server/S01PacketJoinGame",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "S07PacketRespawn",
+      "obfuscatedName": "net/minecraft/network/play/server/S07PacketRespawn",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "C0APacketAnimation",
+      "obfuscatedName": "net/minecraft/network/play/client/C0APacketAnimation",
+      "fields": [],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "()V",
+          "static": false,
+          "binding": "C0A_PACKET_ANIMATION_CONSTRUCTOR",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "EntityOtherPlayerMP",
+      "obfuscatedName": "net/minecraft/client/entity/EntityOtherPlayerMP",
+      "fields": [],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(Lnet/minecraft/world/World;Lcom/mojang/authlib/GameProfile;)V",
+          "static": false
+        },
+        {
+          "name": "setPositionAndRotation2",
+          "obfuscatedName": "setPositionAndRotation2",
+          "signature": "(DDDFFIZ)V",
+          "static": false
+        }
+      ]
+    },
+    {
+      "name": "EntityPlayerMP",
+      "obfuscatedName": "net/minecraft/entity/player/EntityPlayerMP",
+      "fields": [
+        {
+          "name": "ping",
+          "obfuscatedName": "ping",
+          "signature": "I",
+          "static": false,
+          "binding": "PING_FIELD",
+          "required": true
+        }
+      ],
+      "methods": [],
+      "binding": "ENTITY_PLAYER_MP_CLASS",
+      "required": true
+    },
+    {
+      "name": "AxisAlignedBB",
+      "obfuscatedName": "net/minecraft/util/AxisAlignedBB",
+      "fields": [
+        {
+          "name": "minX",
+          "obfuscatedName": "minX",
+          "signature": "D",
+          "static": false,
+          "binding": "AXIS_ALIGNED_BB_MIN_X",
+          "required": true
+        },
+        {
+          "name": "minY",
+          "obfuscatedName": "minY",
+          "signature": "D",
+          "static": false,
+          "binding": "AXIS_ALIGNED_BB_MIN_Y",
+          "required": true
+        },
+        {
+          "name": "minZ",
+          "obfuscatedName": "minZ",
+          "signature": "D",
+          "static": false,
+          "binding": "AXIS_ALIGNED_BB_MIN_Z",
+          "required": true
+        },
+        {
+          "name": "maxX",
+          "obfuscatedName": "maxX",
+          "signature": "D",
+          "static": false,
+          "binding": "AXIS_ALIGNED_BB_MAX_X",
+          "required": true
+        },
+        {
+          "name": "maxY",
+          "obfuscatedName": "maxY",
+          "signature": "D",
+          "static": false,
+          "binding": "AXIS_ALIGNED_BB_MAX_Y",
+          "required": true
+        },
+        {
+          "name": "maxZ",
+          "obfuscatedName": "maxZ",
+          "signature": "D",
+          "static": false,
+          "binding": "AXIS_ALIGNED_BB_MAX_Z",
+          "required": true
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "C02PacketUseEntity_Action",
+      "obfuscatedName": "net/minecraft/network/play/client/C02PacketUseEntity$Action",
+      "fields": [
+        {
+          "name": "ATTACK",
+          "obfuscatedName": "ATTACK",
+          "signature": "Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;",
+          "static": true,
+          "binding": "C02_PACKET_USE_ENTITY_ACTION_ATTACK",
+          "required": true
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "BaseAttributeMap",
+      "obfuscatedName": "net/minecraft/entity/ai/attributes/BaseAttributeMap",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getAttributeInstance",
+          "obfuscatedName": "getAttributeInstance",
+          "signature": "(Lnet/minecraft/entity/ai/attributes/IAttribute;)Lnet/minecraft/entity/ai/attributes/IAttributeInstance;",
+          "static": false,
+          "binding": "ATTRIBUTE_MAP_GET_ATTRIBUTE_INSTANCE",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "IAttributeInstance",
+      "obfuscatedName": "net/minecraft/entity/ai/attributes/IAttributeInstance",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getBaseValue",
+          "obfuscatedName": "getBaseValue",
+          "signature": "()D",
+          "static": false,
+          "binding": "ATTRIBUTE_INSTANCE_GET_BASE_VALUE",
+          "required": true
+        },
+        {
+          "name": "setBaseValue",
+          "obfuscatedName": "setBaseValue",
+          "signature": "(D)V",
+          "static": false,
+          "binding": "ATTRIBUTE_INSTANCE_SET_BASE_VALUE",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "C02PacketUseEntity",
+      "obfuscatedName": "net/minecraft/network/play/client/C02PacketUseEntity",
+      "fields": [],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(Lnet/minecraft/entity/Entity;Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;)V",
+          "static": false,
+          "binding": "C02_PACKET_USE_ENTITY_CONSTRUCTOR_ENTITY_ACTION",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "C03PacketPlayer",
+      "obfuscatedName": "net/minecraft/network/play/client/C03PacketPlayer",
+      "fields": [
+        {
+          "name": "yaw",
+          "obfuscatedName": "yaw",
+          "signature": "F",
+          "static": false,
+          "binding": "C03_PACKET_PLAYER_YAW",
+          "required": true
+        },
+        {
+          "name": "pitch",
+          "obfuscatedName": "pitch",
+          "signature": "F",
+          "static": false,
+          "binding": "C03_PACKET_PLAYER_PITCH",
+          "required": true
+        },
+        {
+          "name": "rotating",
+          "obfuscatedName": "rotating",
+          "signature": "Z",
+          "static": false,
+          "binding": "C03_PACKET_PLAYER_ROTATING",
+          "required": true
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "()V",
+          "static": false,
+          "binding": "C03_PACKET_PLAYER_NOARGS_CONSTRUCTOR",
+          "required": true
+        },
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(Z)V",
+          "static": false,
+          "binding": "C03_PACKET_PLAYER_CONSTRUCTOR",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "C04PacketPlayerPosition",
+      "obfuscatedName": "net/minecraft/network/play/client/C03PacketPlayer$C04PacketPlayerPosition",
+      "fields": [],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(DDDZ)V",
+          "static": false,
+          "binding": "C04_PACKET_PLAYER_POSITION_CONSTRUCTOR",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "C05PacketPlayerLook",
+      "obfuscatedName": "net/minecraft/network/play/client/C03PacketPlayer$C05PacketPlayerLook",
+      "fields": [],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(FFZ)V",
+          "static": false,
+          "binding": "C05_PACKET_PLAYER_LOOK_CONSTRUCTOR",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "C06PacketPlayerPosLook",
+      "obfuscatedName": "net/minecraft/network/play/client/C03PacketPlayer$C06PacketPlayerPosLook",
+      "fields": [],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(DDDFFZ)V",
+          "static": false,
+          "binding": "C06_PACKET_PLAYER_POS_LOOK_CONSTRUCTOR",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "C0EPacketClickWindow",
+      "obfuscatedName": "net/minecraft/network/play/client/C0EPacketClickWindow",
+      "fields": [],
+      "methods": [
+        {
+          "name": "<init>",
+          "obfuscatedName": "<init>",
+          "signature": "(IIIILnet/minecraft/item/ItemStack;S)V",
+          "static": false,
+          "binding": "C0E_PACKET_CLICK_WINDOW_CONSTRUCTOR",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "EntityMob",
+      "obfuscatedName": "net/minecraft/entity/monster/EntityMob",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "EntityAnimal",
+      "obfuscatedName": "net/minecraft/entity/passive/EntityAnimal",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "EntityArmorStand",
+      "obfuscatedName": "net/minecraft/entity/item/EntityArmorStand",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "S0DPacketCollectItem",
+      "obfuscatedName": "net/minecraft/network/play/server/S0DPacketCollectItem",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getCollectedItemEntityID",
+          "obfuscatedName": "getCollectedItemEntityID",
+          "signature": "()I",
+          "static": false,
+          "aliases": [
+            "func_149354_c"
+          ]
+        },
+        {
+          "name": "getEntityID",
+          "obfuscatedName": "getEntityID",
+          "signature": "()I",
+          "static": false,
+          "aliases": [
+            "func_149353_d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "C0BPacketEntityAction",
+      "obfuscatedName": "net/minecraft/network/play/client/C0BPacketEntityAction",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "C16PacketClientStatus",
+      "obfuscatedName": "net/minecraft/network/play/client/C16PacketClientStatus",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "C16PacketClientStatus_State",
+      "obfuscatedName": "net/minecraft/network/play/client/C16PacketClientStatus$EnumState",
+      "fields": [],
+      "methods": []
+    },
+    {
+      "name": "ContainerChest",
+      "obfuscatedName": "net/minecraft/inventory/ContainerChest",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getLowerChestInventory",
+          "obfuscatedName": "getLowerChestInventory",
+          "signature": "()Lnet/minecraft/inventory/IInventory;",
+          "aliases": [
+            "func_85151_d"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IInventory",
+      "obfuscatedName": "net/minecraft/inventory/IInventory",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getSizeInventory",
+          "obfuscatedName": "getSizeInventory",
+          "signature": "()I",
+          "aliases": [
+            "func_70302_i_"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "C01PacketChatMessage",
+      "obfuscatedName": "net/minecraft/network/play/client/C01PacketChatMessage",
+      "fields": [],
+      "methods": [
+        {
+          "name": "getMessage",
+          "obfuscatedName": "getMessage",
+          "signature": "()Ljava/lang/String;",
+          "aliases": [
+            "func_149439_c"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PlayerCapabilities",
+      "obfuscatedName": "net/minecraft/entity/player/PlayerCapabilities",
+      "fields": [
+        {
+          "name": "allowFlying",
+          "obfuscatedName": "allowFlying",
+          "signature": "Z",
+          "static": false,
+          "aliases": [
+            "field_75101_c"
+          ]
+        }
+      ],
+      "methods": []
+    },
+    {
+      "name": "C0DPacketCloseWindow",
+      "obfuscatedName": "net/minecraft/network/play/client/C0DPacketCloseWindow",
+      "fields": [],
+      "methods": []
+    }
+  ],
+  "optionalClasses": [
+    {
+      "name": "LunarToastManager",
+      "obfuscatedName": "com/moonsworth/lunar/client/ORIIOCOORHRRCRCIROICOOICRIRIRO/OCRRORHCHRCRIIHRORIRIRROCORHCI/COHCCRCCIOORIRIIRIRCIHHCHIRCOH",
+      "methods": [
+        {
+          "name": "enqueue",
+          "obfuscatedName": "IOCIHHIRIROCOIROOCORCCIOOIIIRR",
+          "signature": "(Lcom/moonsworth/lunar/client/ORIIOCOORHRRCRCIROICOOICRIRIRO/OCRRORHCHRCRIIHRORIRIRROCORHCI/OCCRIICCOCOIORRORHIRHCHCOHHHHC;)Lcom/moonsworth/lunar/client/ORIIOCOORHRRCRCIROICOOICRIRIRO/OCRRORHCHRCRIIHRORIRIRROCORHCI/OCCRIICCOCOIORRORHIRHCHCOHHHHC;"
+        }
+      ]
+    },
+    {
+      "name": "LunarToast",
+      "obfuscatedName": "com/moonsworth/lunar/client/ORIIOCOORHRRCRCIROICOOICRIRIRO/OCRRORHCHRCRIIHRORIRIRROCORHCI/OCCRIICCOCOIORRORHIRHCHCOHHHHC",
+      "fields": [
+        {
+          "name": "title",
+          "obfuscatedName": "OHIOCRHHRRCIOCHRCOOIRIIHCIRCIH",
+          "signature": "Ljava/lang/String;"
+        },
+        {
+          "name": "severity",
+          "obfuscatedName": "IIOCIRHHHHICIIIORHHOROCCIOOCOH",
+          "signature": "Lcom/moonsworth/lunar/client/ORIIOCOORHRRCRCIROICOOICRIRIRO/OCRRORHCHRCRIIHRORIRIRROCORHCI/OIRIRHRCCIHOHRROCOHICIRIHIIHCH;"
+        }
+      ]
+    },
+    {
+      "name": "LunarToastSeverity",
+      "obfuscatedName": "com/moonsworth/lunar/client/ORIIOCOORHRRCRCIROICOOICRIRIRO/OCRRORHCHRCRIIHRORIRIRROCORHCI/OIRIRHRCCIHOHRROCOHICIRIHIIHCH",
+      "fields": [
+        {
+          "name": "ERROR",
+          "obfuscatedName": "ERROR",
+          "signature": "Lcom/moonsworth/lunar/client/ORIIOCOORHRRCRCIROICOOICRIRIRO/OCRRORHCHRCRIIHRORIRIRROCORHCI/OIRIRHRCCIHOHRROCOHICIRIHIIHCH;",
+          "static": true
+        }
+      ]
+    }
+  ]
+}

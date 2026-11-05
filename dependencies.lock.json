@@ -1,0 +1,100 @@
+{
+  "artifacts": [
+    {
+      "group": "org.ow2.asm",
+      "artifact": "asm",
+      "version": "9.5",
+      "scope": "bundled",
+      "file": "asm-9.5.jar",
+      "sha256": "b62e84b5980729751b0458c534cf1366f727542bb8d158621335682a460f0353"
+    },
+    {
+      "group": "org.ow2.asm",
+      "artifact": "asm-tree",
+      "version": "9.5",
+      "scope": "bundled",
+      "file": "asm-tree-9.5.jar",
+      "sha256": "3c33a648191079aeaeaeb7c19a49b153952f9e40fe86fbac5205554ddd9acd94"
+    },
+    {
+      "group": "org.ow2.asm",
+      "artifact": "asm-commons",
+      "version": "9.5",
+      "scope": "bundled",
+      "file": "asm-commons-9.5.jar",
+      "sha256": "72eee9fbafb9de8d9463f20dd584a48ceeb7e5152ad4c987bfbe17dd4811c9ae"
+    },
+    {
+      "group": "com.google.code.gson",
+      "artifact": "gson",
+      "version": "2.8.0",
+      "scope": "host",
+      "file": "gson-2.8.0.jar",
+      "sha256": "c6221763bd79c4f1c3dc7f750b5f29a0bb38b367b81314c4f71896e340c40825"
+    },
+    {
+      "group": "org.lwjgl.lwjgl",
+      "artifact": "lwjgl",
+      "version": "2.9.4-nightly-20150209",
+      "scope": "host",
+      "file": "lwjgl-2.9.4-nightly-20150209.jar",
+      "sha256": "833e721817f70d1445eec13d8ce5a86e12af70efac5014356302e2bbc68b3fe2"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-buffer",
+      "version": "4.0.23.Final",
+      "scope": "host",
+      "file": "netty-buffer-4.0.23.Final.jar",
+      "sha256": "8bb81b5daf53e014522bc4faefd4eba97afacbdfb872950a1a0e880bd3695306"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-codec",
+      "version": "4.0.23.Final",
+      "scope": "host",
+      "file": "netty-codec-4.0.23.Final.jar",
+      "sha256": "d4fa678b6d53f572d90dc0d44d1a60c550f1d00da3517586a74c5f36c104ccef"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-common",
+      "version": "4.0.23.Final",
+      "scope": "host",
+      "file": "netty-common-4.0.23.Final.jar",
+      "sha256": "75cff93263c532603d0284d0b20362d7b89dc46358656c684146f411f2f52f3a"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-handler",
+      "version": "4.0.23.Final",
+      "scope": "host",
+      "file": "netty-handler-4.0.23.Final.jar",
+      "sha256": "440e335cae7307892cccced6e0b78a1fd951948a3dc05e7db6b2a06d7607b04a"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-transport",
+      "version": "4.0.23.Final",
+      "scope": "host",
+      "file": "netty-transport-4.0.23.Final.jar",
+      "sha256": "abc250e5156b84aa2429df6f61bd440132f1756dcb1b4311cafe12c974ddb9c1"
+    },
+    {
+      "group": "net.java.jinput",
+      "artifact": "jinput",
+      "version": "2.0.5",
+      "scope": "host-transitive",
+      "file": "jinput-2.0.5.jar",
+      "sha256": "79b5a4f5829e1a49a415711f7fb8eb5b9ad22defa72929fda2da96ec30d3f018"
+    },
+    {
+      "group": "net.java.jutils",
+      "artifact": "jutils",
+      "version": "1.0.0",
+      "scope": "host-transitive",
+      "file": "jutils-1.0.0.jar",
+      "sha256": "c3334ff39cf0ab3b54925619101054c90098b7c733b1e7834c7b75e4c41e84a5"
+    }
+  ]
+}

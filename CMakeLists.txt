@@ -1,0 +1,72 @@
+cmake_minimum_required(VERSION 3.21)
+file(STRINGS "${CMAKE_SOURCE_DIR}/VERSION" NEBULA_VERSION LIMIT_COUNT 1)
+project(NebulaClient VERSION ${NEBULA_VERSION} LANGUAGES C CXX ASM)
+configure_file(native/include/nebula/core/version.hpp.in "${CMAKE_BINARY_DIR}/generated/nebula/core/version.hpp" @ONLY)
+if(NOT WIN32 OR NOT MINGW OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
+  message(FATAL_ERROR "Validated toolchain: Windows x64 MinGW-w64 (UCRT64)")
+endif()
+find_package(Python3 REQUIRED COMPONENTS Interpreter)
+find_package(Java 1.8 REQUIRED COMPONENTS Development)
+if(NOT Java_VERSION_STRING MATCHES "^1\\.8\\.")
+  message(FATAL_ERROR "Set JAVA_HOME to the supported JDK 8 toolchain")
+endif()
+get_filename_component(JAVA_BIN "${Java_JAVAC_EXECUTABLE}" DIRECTORY)
+get_filename_component(JAVA_HOME "${JAVA_BIN}" DIRECTORY)
+set(JAVA_OUT "${CMAKE_BINARY_DIR}/java")
+set(JAVA_JAR "${JAVA_OUT}/client.jar")
+file(WRITE "${CMAKE_BINARY_DIR}/.nebula-generated" "Nebula build output\n")
+file(MAKE_DIRECTORY "${CMAKE_SOURCE_DIR}/dist")
+file(WRITE "${CMAKE_SOURCE_DIR}/dist/.nebula-generated" "Nebula distribution output\n")
+file(GLOB_RECURSE JAVA_INPUTS CONFIGURE_DEPENDS "src/main/java/*.java" "src/main/resources/*" "tests/java/*.java")
+add_custom_command(OUTPUT "${JAVA_JAR}" "${JAVA_OUT}/complete.stamp"
+  COMMAND "${CMAKE_COMMAND}" -E env "JAVA_HOME=${JAVA_HOME}" cmd /c call "${CMAKE_SOURCE_DIR}/mvnw.cmd" -B -ntp "-Dnebula.build.directory=${JAVA_OUT}" "-Dmaven.repo.local=${CMAKE_SOURCE_DIR}/.cache/m2" -DskipTests package
+  COMMAND powershell.exe -NoProfile -ExecutionPolicy Bypass -File "${CMAKE_SOURCE_DIR}/tools/verify_dependencies.ps1" -DependencyDirectory "${JAVA_OUT}/dependencies"
+  COMMAND "${CMAKE_COMMAND}" -E touch "${JAVA_OUT}/complete.stamp"
+  DEPENDS ${JAVA_INPUTS} VERSION pom.xml dependencies.lock.json mvnw.cmd tools/maven.ps1 tools/verify_dependencies.ps1
+  WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}" VERBATIM)
+add_custom_target(java_payload DEPENDS "${JAVA_JAR}" "${JAVA_OUT}/complete.stamp")
+set(PAYLOAD "${CMAKE_BINARY_DIR}/generated/payload.bin")
+set(PAYLOAD_ASM "${CMAKE_BINARY_DIR}/generated/payload.S")
+add_custom_command(OUTPUT "${PAYLOAD}" "${PAYLOAD_ASM}"
+  COMMAND "${Python3_EXECUTABLE}" "${CMAKE_SOURCE_DIR}/tools/package_payload.py" --jar "${JAVA_JAR}" --blob "${PAYLOAD}" --asm "${PAYLOAD_ASM}"
+  DEPENDS "${JAVA_JAR}" tools/package_payload.py VERBATIM)
+file(GLOB_RECURSE OWNED_CPP CONFIGURE_DEPENDS "native/src/*.cpp")
+add_library(nebula_native OBJECT ${OWNED_CPP})
+target_include_directories(nebula_native PRIVATE "${CMAKE_BINARY_DIR}/generated" native/include native/include/nebula/win32 native/third_party/imgui native/third_party/minhook/include "${JAVA_HOME}/include" "${JAVA_HOME}/include/win32")
+target_compile_features(nebula_native PRIVATE cxx_std_17)
+add_library(nebula_imgui OBJECT native/third_party/imgui/imgui.cpp native/third_party/imgui/imgui_draw.cpp native/third_party/imgui/imgui_tables.cpp native/third_party/imgui/imgui_widgets.cpp native/third_party/imgui/backends/imgui_impl_win32.cpp native/third_party/imgui/backends/imgui_impl_opengl2.cpp)
+target_include_directories(nebula_imgui PRIVATE native/third_party/imgui)
+add_library(nebula_minhook OBJECT native/third_party/minhook/src/buffer.c native/third_party/minhook/src/hook.c native/third_party/minhook/src/trampoline.c native/third_party/minhook/src/hde/hde64.c)
+target_include_directories(nebula_minhook PRIVATE native/third_party/minhook/include native/third_party/minhook/src)
+add_library(nebula_client SHARED $<TARGET_OBJECTS:nebula_native> $<TARGET_OBJECTS:nebula_imgui> $<TARGET_OBJECTS:nebula_minhook> "${PAYLOAD_ASM}")
+target_link_libraries(nebula_client PRIVATE opengl32 gdi32 user32 dwmapi imm32)
+target_link_options(nebula_client PRIVATE -static -static-libgcc -static-libstdc++ -s)
+set_target_properties(nebula_client PROPERTIES PREFIX "" OUTPUT_NAME output RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/dist" ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/import")
+add_custom_target(distribution ALL
+  DEPENDS nebula_client
+  COMMAND "${CMAKE_COMMAND}" -E copy_if_different "${JAVA_JAR}" "${CMAKE_SOURCE_DIR}/dist/client.jar"
+  COMMAND "${CMAKE_COMMAND}" -E copy_directory "${CMAKE_SOURCE_DIR}/native/assets/fonts" "${CMAKE_SOURCE_DIR}/dist/fonts"
+  COMMAND "${CMAKE_COMMAND}" -E copy_directory "${CMAKE_SOURCE_DIR}/licenses" "${CMAKE_SOURCE_DIR}/dist/licenses" VERBATIM)
+enable_testing()
+file(READ "${CMAKE_SOURCE_DIR}/dependencies.lock.json" DEPENDENCY_LOCK)
+string(JSON ARTIFACT_COUNT LENGTH "${DEPENDENCY_LOCK}" artifacts)
+math(EXPR LAST_ARTIFACT "${ARTIFACT_COUNT}-1")
+set(TEST_CP "${JAVA_OUT}/test-classes" "${JAVA_JAR}")
+foreach(index RANGE ${LAST_ARTIFACT})
+  string(JSON jar GET "${DEPENDENCY_LOCK}" artifacts ${index} file)
+  list(APPEND TEST_CP "${JAVA_OUT}/dependencies/${jar}")
+endforeach()
+list(JOIN TEST_CP ";" TEST_CLASSPATH)
+foreach(check IN ITEMS AsmRuntimeCheck NetworkHookCheck CombatTickCheck)
+  add_test(NAME java_${check} COMMAND "${Java_JAVA_EXECUTABLE}" -cp "${TEST_CLASSPATH}" ${check})
+endforeach()
+
+foreach(check IN ITEMS SettingsPersistenceCheck TransportCheck ConcurrencyCheck GuiInputCheck RotationLifecycleCheck HitboxOwnershipCheck PacketIsolationCheck ServerRotationCheck TargetPriorityCheck)
+  add_test(NAME java_${check} COMMAND "${Java_JAVA_EXECUTABLE}" -cp "${TEST_CLASSPATH}" ${check} "${CMAKE_BINARY_DIR}/test-data/${check}")
+endforeach()
+add_executable(nebula_payload_check tests/native/PayloadCheck.cpp native/src/security/crypto.cpp)
+target_include_directories(nebula_payload_check PRIVATE native/include "${JAVA_HOME}/include" "${JAVA_HOME}/include/win32")
+target_compile_features(nebula_payload_check PRIVATE cxx_std_17)
+target_link_options(nebula_payload_check PRIVATE -static -static-libgcc -static-libstdc++)
+add_test(NAME native_payload COMMAND nebula_payload_check "${PAYLOAD}")
+

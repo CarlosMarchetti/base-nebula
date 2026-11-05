@@ -1,0 +1,29 @@
+{
+  "originalPreservation": {
+    "checked": 194,
+    "changedSinceMigration": []
+  },
+  "dll": {
+    "bytes": 3298816,
+    "machine": "0x8664",
+    "sha256": "436d21ba63d182a383b086c415c91e5eb7ff02ce6211f90b0413ab0497168740"
+  },
+  "jniExports": [
+    "Java_br_lock_bridge_NativeBridge_captureWorldMatricesNative",
+    "Java_br_lock_bridge_NativeBridge_isGuiOpenNative",
+    "Java_br_lock_bridge_NativeBridge_onLogNative",
+    "Java_br_lock_bridge_NativeBridge_publishRefillToastNative",
+    "Java_br_lock_bridge_NativeBridge_publishVisualsNative",
+    "Java_br_lock_bridge_NativeBridge_sendNotificationNative",
+    "Java_br_lock_bridge_NativeBridge_setGuiOpenNative",
+    "Java_br_lock_bridge_NativeBridge_syncModuleDefinitionNative",
+    "Java_br_lock_bridge_NativeBridge_syncModuleState",
+    "Java_br_lock_bridge_NativeBridge_updateDamageSnapshotNative",
+    "Java_br_lock_injection_HookManager_nRetransform",
+    "Java_br_lock_injection_HookManager_nSetTargets"
+  ],
+  "removedPublicContractMethods": {},
+  "jarEntries": 340,
+  "retiredSourcesAbsent": true,
+  "runtimeMinecraftValidated": false
+}

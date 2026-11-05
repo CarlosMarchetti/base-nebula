@@ -1,0 +1,22 @@
+[
+  {
+    "path": "native/third_party/imgui/LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/ocornut/imgui/v1.90.8/LICENSE.txt",
+    "sha256": "0ebf8feb061536bdebd7c6a365b64808ae3479048b1c44113e19037680c5f2be"
+  },
+  {
+    "path": "native/assets/fonts/OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/sansation/OFL.txt",
+    "sha256": "156ea6985861158c7dea63ecaac4c78ab0ed737d168ddffc3e34c687985a033b"
+  },
+  {
+    "path": "native/assets/fonts/Sansation-Regular.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/sansation/Sansation-Regular.ttf",
+    "sha256": "6d47039ee6665d78b143a1b264abc02017a33ffa52a4e9f6645ce357f92d4f09"
+  },
+  {
+    "path": "native/assets/fonts/Sansation-Bold.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/sansation/Sansation-Bold.ttf",
+    "sha256": "8ec74c9628179ed95d075440ba4d01091f800ca9be045ddc25982bd8bc21afff"
+  }
+]
